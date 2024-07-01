@@ -1,2 +1,2 @@
 # python-javoblarim
-ushbu repositoryda python darslariga oid kodlar bor
+Ushbu repositoryda python darslariga oid kodlar bor
