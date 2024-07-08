@@ -15,19 +15,19 @@ Created on Thu Jul  4 17:13:34 2024
 #         break
 # print('Dastur tugadi!')
 
-# import random
+import random
 
-# secret_number = random.randint(1, 100)
-# guess = 0
-# guesses = []
-# while guess != secret_number:
-#     guess = int(input("Угадайте число от 1 до 100: "))
-#     if guess < secret_number:
-#         print("Загаданное число больше.")
-#     elif guess > secret_number:
-#         print("Загаданное число меньше.")
-#     guesses.append(guess)
-# print(f"Вы угадали за {len(guesses)} попыток")
+secret_number = random.randint(1, 100)
+guess = 0
+guesses = []
+while guess != secret_number:
+    guess = int(input("Угадайте число от 1 до 100: "))
+    if guess < secret_number:
+        print("Загаданное число больше.")
+    elif guess > secret_number:
+        print("Загаданное число меньше.")
+    guesses.append(guess)
+print(f"Вы угадали за {len(guesses)} попыток")
 
 
 # Дано целое число, не меньшее 2. Выведите его наименьший натуральный делитель, отличный от 1.
