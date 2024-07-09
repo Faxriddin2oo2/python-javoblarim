@@ -97,7 +97,7 @@ def sontop_pc(x=10):
         if javob == "-":
             yuqori = taxmin - 1
         elif javob == "+":
-            quyi = taxmin - 1
+            quyi = taxmin + 1
         else:
             break
     print(f"Men {taxminlar} ta taxmin bilan topdim!")
