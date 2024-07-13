@@ -65,7 +65,7 @@ auto2 = Avtosalon("Lada", "Rohat", "Largus", 998555745)
 def see_methods(klass):
     return [method for method in dir(klass) if method.startswith('__') is False]
 
-print(see_methods(Avtosalon))
+print(see_methods(Avtosalon))а
 
 
 
