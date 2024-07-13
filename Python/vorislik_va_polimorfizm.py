@@ -67,20 +67,6 @@ inson = Shaxs("Hasan","Alimov","FB001122",1995)
 #         self.kocha = kocha
 #         self.tuman = tuman
 #         self.viloyat = viloyat
-    
-#     def get_manzil(self):
-#         """Manzilni ko'rish"""
-#         manzil = f"{self.viloyat} viloyati, {self.tuman} tumani, "
-#         manzil += f"{self.kocha} ko'chasi, {self.uy}-uy"
-#         return manzil
-# class Manzil:
-#     """Manzil saqlash uchun klass"""
-#     def __init__(self,uy,kocha,tuman,viloyat):
-#         """Manzil xususiyatlari"""
-#         self.uy = uy
-#         self.kocha = kocha
-#         self.tuman = tuman
-#         self.viloyat = viloyat
         
 #     def get_manzil(self):
 #         """Manzil ko'rish"""
@@ -179,11 +165,32 @@ class Sotuvchi(Shaxs):
         return info
 
 sotuvchi = Sotuvchi("ali", "valiyev", 'ad2232232', 2002, 102)
+
+class Foydalanuvchi(Shaxs):
+    def __init__(self, ism, familiya, passport, tyil,admin):
+        super().__init__(ism, familiya, passport, tyil)
+        self.admin = admin
     
     
-    
-    
-    
+class Admin:
+    def __init__(self,tajriba,javobgarlik,ish_soati):
+        self.tajriba = tajriba
+        self.javobgarlik = javobgarlik
+        self.ish_soati = ish_soati
+        
+    def ish_jarayoni(self):
+        return f"Adminimiz {self.tajriba} yil tajribaga ega bo'lib uning javobgariligiga {self.javobgarlik} ni nazorat qilish kiradi \
+            va bu hodimimizning kuniga {self.ish_soati} soat ishlaydi"
+            
+    def ban_user(self):
+        return "Foydalanuvchi bloklandi"
+
+
+admin = Admin(22, "Distsiplina", 9)
+foydalanuvchi = Foydalanuvchi('hasan', 'husanov', 'ds2232232', 2000, admin)
+print(foydalanuvchi.admin.ish_jarayoni())
+print(foydalanuvchi.admin.ban_user())
+print(foydalanuvchi.admin.tajriba)
     
     
     
