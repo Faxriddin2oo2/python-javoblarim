@@ -239,6 +239,7 @@ class Fan:
 
 fan1 = Fan('matematika', 'kimyo', 'fizika', 'biologiya', 'tarix')
 fan2 = Fan('matematika', 'kimyo', 'fizika', 'biologiya', 'tarix')
+fanlar = [fan1,fan2]
 
 
 
