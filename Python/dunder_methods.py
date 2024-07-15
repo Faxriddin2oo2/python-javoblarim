@@ -199,29 +199,7 @@ class Fan:
         self.tarix = tarix
         self.studentlar = []
     
-    # def __setitem__(self,index,value):
-    #     if isinstance(value, Avto):
-    #         self.avtolar[index] = value
-            
-    # def __add__(self,qiymat):
-    #     if isinstance(qiymat,AvtoSalon):
-    #         yangi_salon =  AvtoSalon(f"{self.name} {qiymat.name}")
-    #         yangi_salon.avtolar = self.avtolar + qiymat.avtolar
-    #         return yangi_salon
         
-    # def __call__(self,*param):
-    #     if param: # agar parametr bo'lsa
-    #         for avto in param:
-    #             self.add_avto(avto)
-    #     else: # agar parametr bo'lmasa
-    #         return [avto for avto in self.avtolar]
-    
-    # def add_avto(self, *qiymat):
-    #     for avto in qiymat:
-    #         if isinstance(avto, Avto):
-    #             self.avtolar.append(avto)
-    #         else:
-    #             print("Avto obyektini kiriting")        
     def __repr__(self):
         return f"Bizda {self.matematika}, {self.kimyo}, {self.fizika}, {self.biologiya} va {self.tarix} fanlar bor"
     
