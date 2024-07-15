@@ -184,14 +184,61 @@ class Talaba(Shaxs):
         """Kichikligi5"""
         return self.bosqich < boshqa_talaba.bosqich
         
-talaba = Talaba("valijon","aliyev","FA112299",2000,"0000012",3)
-talaba2 = Talaba('ali', 'valiyev', 'AS2223112', 2002, 'erkak', 1)
+# talaba = Talaba("valijon","aliyev","FA112299",2000,"0000012",3)
+# talaba2 = Talaba('ali', 'valiyev', 'AS2223112', 2002, 'erkak', 1)
 
+# Fan degan yangi klass yarating. Fan obyetklari tarkibida shu fanga yozilgan talabalarning ro'yxati saqlansin. 
+# Buning uchun Fanga add_student(), __getitem__, __setitem__, __len__ kabi metodlarni qo'shing.
+class Fan:
+    """Fan klassi"""
+    def __init__(self, matematika, kimyo, fizika, biologiya, tarix):
+        self.matematika = matematika
+        self.kimyo = kimyo
+        self.fizika = fizika
+        self.biologiya = biologiya
+        self.tarix = tarix
+        self.studentlar = []
+    
+    # def __setitem__(self,index,value):
+    #     if isinstance(value, Avto):
+    #         self.avtolar[index] = value
+            
+    # def __add__(self,qiymat):
+    #     if isinstance(qiymat,AvtoSalon):
+    #         yangi_salon =  AvtoSalon(f"{self.name} {qiymat.name}")
+    #         yangi_salon.avtolar = self.avtolar + qiymat.avtolar
+    #         return yangi_salon
+        
+    # def __call__(self,*param):
+    #     if param: # agar parametr bo'lsa
+    #         for avto in param:
+    #             self.add_avto(avto)
+    #     else: # agar parametr bo'lmasa
+    #         return [avto for avto in self.avtolar]
+    
+    # def add_avto(self, *qiymat):
+    #     for avto in qiymat:
+    #         if isinstance(avto, Avto):
+    #             self.avtolar.append(avto)
+    #         else:
+    #             print("Avto obyektini kiriting")        
+    def __repr__(self):
+        return f"Bizda {self.matematika}, {self.kimyo}, {self.fizika}, {self.biologiya} va {self.tarix} fanlar bor"
+    
+    def __len__(self):
+        return len(self.studentlar)
+    
+    def __getitem__(self, index):
+        return self.studentlar[index]
+    
+    def __setitem__(self,index, value):
+        if isinstance(value, Fan):
+            self.studentlar[index] = value
+    
+    
 
-
-
-
-
+fan1 = Fan('matematika', 'kimyo', 'fizika', 'biologiya', 'tarix')
+fan2 = Fan('matematika', 'kimyo', 'fizika', 'biologiya', 'tarix')
 
 
 
