@@ -19,4 +19,10 @@
 #print("Tomonlari 125 ga teng kvadratning yuzi:", 125**2)
 #print("Tomonlari 125 ga teng kvadratning perimetri:", 125*4)
 #print("Diametri 12 ga teng bo'lgan doiraning yuzi:", 3.14*(6**2))
-print("Katetlari 6 va 8 bo'lgan to'g'ri burchakli uchburchakning gipotenuzasi:", (6**2 + 8**2)**(1/2))
+# print("Katetlari 6 va 8 bo'lgan to'g'ri burchakli uchburchakning gipotenuzasi:", (6**2 + 8**2)**(1/2))
+import pickle
+with open('info','rb') as file:
+    talaba1 = pickle.load(file)
+    talaba2 = pickle.load(file)
+
+print(talaba1)
