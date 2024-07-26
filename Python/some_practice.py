@@ -28,6 +28,8 @@ while True:
 	if savol == '0':
 		break
     
+print("Dastur tugadi!")
+
     
     
 # class Talaba:
