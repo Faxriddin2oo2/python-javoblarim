@@ -176,3 +176,71 @@ Created on Fri Jul 26 17:21:57 2024
         
 
 # PRACTICE
+# Bugungi sanadan boshlab 2 hafta farq bilan 10 ta sanani konsolga chiqaring
+# import datetime as dt
+# hozir = dt.date.today()
+# ikki_hafta = dt.date(2024,8,10)
+# farq = ikki_hafta - hozir
+# for n in range(0,10):
+#     n += 1
+#     print(f"{hozir + n*farq}")
+
+
+# Tug'ilgan kuningizdan bugungi sanagacha qancha yil, oy, kun o'tganini qaytaruvchi funksiya yozing
+# from datetime import timedelta
+# hozir = dt.date.today()
+# tugilgan_kunim = dt.date(2002, 9, 4)
+# nechi_kun = hozir - tugilgan_kunim
+# nechi_kun = nechi_kun
+# year = timedelta(days=365)
+# month = timedelta(days=30)
+# yillar = nechi_kun//year
+# oylar = nechi_kun//month
+
+# print(f"Tug'ilganingizga {yillar} yil, {oylar} oy va {nechi_kun} kun bo'ldi")
+
+
+# Foydalanuvchidan telefon raqamini kiritishni so'rang. Kiritlgan qiymatni andoza yordamida tekshiring
+import re
+
+# raqam = input("Raqamingizni kiriting: ")
+# andoza = "^9.......6$"
+
+# print(re.match(andoza, raqam))
+
+
+# Berilgan matndan veb sahifa manzilini ajratib olyuvchi funksiya yozing. Quyidagi matndan namuna sifatida foydalanishingiz mumkin:
+matn = "Assalom alaykum hurmatli do'stlar. Navbatdagi darsimiz YouTubega yuklandi: https://youtu.be/vsxJPRLXpgI \
+Ushbu darsimizda unittest moduli yordamida klasslarning xususiyatlar va metodlarini tekshiruvchi dastur yozishni o'rganamiz. \
+Bugungi dars manzili: https://python.sariq.dev/testing/37-klass-test"
+andoza = "^https://.....................................t"
+email = re.findall(andoza, matn)
+print(email)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
