@@ -213,9 +213,9 @@ import re
 matn = "Assalom alaykum hurmatli do'stlar. Navbatdagi darsimiz YouTubega yuklandi: https://youtu.be/vsxJPRLXpgI \
 Ushbu darsimizda unittest moduli yordamida klasslarning xususiyatlar va metodlarini tekshiruvchi dastur yozishni o'rganamiz. \
 Bugungi dars manzili: https://python.sariq.dev/testing/37-klass-test"
-andoza = "^https://.....................................t"
+andoza = "[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+"
 email = re.findall(andoza, matn)
-print(email)
+# print(email)
 
 
 
