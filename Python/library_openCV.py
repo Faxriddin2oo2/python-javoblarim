@@ -1,13 +1,8 @@
+# Bismillah
 """
-11/03/2021
+Created on Tue Jul 30 19:29:19 2024
 
-Dasturlash asoslari
-
-#39-DARS. PYTHON TASHQI KUTUBXONASI
-
-Muallif: Anvar Narzullaev
-
-Web sahifa: https://python.sariq.dev
+@author: asus
 """
 
 # copyright Tim Ruscia aka techwithtim
