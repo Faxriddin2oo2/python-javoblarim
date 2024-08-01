@@ -37,11 +37,3 @@ def convert_add(lst):
     print(sum(sonlar))
         
 convert_add(["1", '2', "4"])
-
-# def Сonvert_add(lst):
-#     sonlar= [int(son) for son in lst]
-#     yigindi = sum(sonlar)
-#     return yigindi
-
-# result = convert_add(['6', '7', '2'])
-# print(result)  
