@@ -53,47 +53,47 @@
 # result = minimal_gorods(city_votes)
 # print(result)
 
-def min_subsidies(debts):
-    total_subsidies = 0
-    visited = set()
+# def min_subsidies(debts):
+#     total_subsidies = 0
+#     visited = set()
 
-    def dfs(person, visited, debts, depth=0, max_depth=1000):
-        if depth > max_depth:
-            raise RecursionError("Слишком глубокая рекурсия")
-        if person in visited:
-            return
-        visited.add(person)
-        debt = debts[person]
-        if debt < 0:
-            raise ValueError("Отрицательный долг")
-        debts[person] = 0
-        if debt > 0:
-            total_subsidies += debt
-            dfs(debts[person], visited, debts, depth+1)
+#     def dfs(person, visited, debts, depth=0, max_depth=1000):
+#         if depth > max_depth:
+#             raise RecursionError("Слишком глубокая рекурсия")
+#         if person in visited:
+#             return
+#         visited.add(person)
+#         debt = debts[person]
+#         if debt < 0:
+#             raise ValueError("Отрицательный долг")
+#         debts[person] = 0
+#         if debt > 0:
+#             total_subsidies += debt
+#             dfs(debts[person], visited, debts, depth+1)
 
-    for person in debts:
-        if person not in visited:
-            dfs(person, visited, debts)
-    return total_subsidies
+#     for person in debts:
+#         if person not in visited:
+#             dfs(person, visited, debts)
+#     return total_subsidies
 
-# Считываем входные данные
-n = int(input())
-debts = {}
-for _ in range(n):
-    a, b = map(int, input().split())
-    if b < 0:
-        print("Отрицательный долг")
-        exit()  # Выходим из программы при обнаружении отрицательного долга
-    debts[a] = b
+# # Считываем входные данные
+# n = int(input())
+# debts = {}
+# for _ in range(n):
+#     a, b = map(int, input().split())
+#     if b < 0:
+#         print("Отрицательный долг")
+#         exit()  # Выходим из программы при обнаружении отрицательного долга
+#     debts[a] = b
 
-# Вычисляем и выводим результат
-try:
-    result = min_subsidies(debts)
-    print(result)
-except RecursionError:
-    print("Слишком глубокая рекурсия")
-except ValueError:
-    print("Обнаружен отрицательный долг")
+# # Вычисляем и выводим результат
+# try:
+#     result = min_subsidies(debts)
+#     print(result)
+# except RecursionError:
+#     print("Слишком глубокая рекурсия")
+# except ValueError:
+#     print("Обнаружен отрицательный долг")
 
 
 
@@ -119,5 +119,7 @@ except ValueError:
 
 # result = minimal_gorods(votes)
 # print(result)
+
+print("Hello Github")
 
 
