@@ -19,23 +19,23 @@ Created on Fri Jul 19 18:51:44 2024
 
 
 # PAPKA ICHIDAGI FAYLLARNI OCHISH
-# with open('data/pi.txt') as fayl:
-#     pi = fayl.read()
-# with open('data/pi.txt') as fayl:
-#     pi = fayl.read()
-#     print(pi)
-# filename = 'data/talabalar.txt'
-# with open(filename) as file:
-#     for line in file:
-#         print(line)
+with open('data/pi.txt') as fayl:
+    pi = fayl.read()
+with open('data/pi.txt') as fayl:
+    pi = fayl.read()
+    print(pi)
+filename = 'data/talabalar.txt'
+with open(filename) as file:
+    for line in file:
+        print(line)
 
-# FAYLNI QATORMA-QATOR OʻQISH
-# filename = 'talabalar.txt'
-# with open(filename) as file:
-#     for line in file:
-#         print(line)
-# with open(filename) as file:
-#     talabalar = file.readlines()
+FAYLNI QATORMA-QATOR OʻQISH
+filename = 'talabalar.txt'
+with open(filename) as file:
+    for line in file:
+        print(line)
+with open(filename) as file:
+    talabalar = file.readlines()
 
 # print(talabalar)
 
