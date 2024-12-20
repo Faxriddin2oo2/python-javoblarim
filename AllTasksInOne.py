@@ -45,3 +45,26 @@
 # print("Radiusi" , radius, "ga teng aylananing yuzi=", aylana_yuzi)
 
 
+# AMALIYOT
+# Quyidagi mashqlarni bajaring:
+# Quyidagi o'zgaruvchilarni yarating: 
+# kocha="Bog'bon"
+# mahalla="Sog'bon"
+# tuman="Bodomzor" 
+# viloyat="Samarqand"
+# Yuqoridagi o'zgaruvchilarni jamlab, quyidagi ko'rinishda konsolga chiqaring:
+# Bog'bon ko'chasi, Sog'bon mahallasi, Bodomzor tumani, Samarqand viloyati
+# print(f"{kocha} ko'chasi, {mahalla} mahallasi, {tuman} tumani, {viloyat} viloyati")
+
+# Yuqoridagi o'zgaruvchilarning (kocha, mahalla, tuman, viloyat) qiymatini foydalanuvchidan so'rang. Va avvalgi mashqni takrorlang.
+kocha=input("Ko'chani nomini kiriting: ")
+mahalla=input("Mahalla nomini kiriting: ")
+tuman=input("Tuman nomini kiriting: ")
+viloyat=input("Viloyat nomini kiriting: ")
+# print(f"{kocha} ko'chasi, {mahalla} mahallasi, {tuman} tumani, {viloyat} viloyati")
+
+# Yuqoridagi matnni konsolga chiqarishda har bir verguldan keyin yangi qatordan yozing
+# print(f"{kocha} ko'chasi,\n{mahalla} mahallasi,\n{tuman} tumani,\n{viloyat} viloyati")
+# Yuqoridagi matnni f-string yordamida, yangi, manzil deb nomlangan o'zgaruvchiga yuklang
+# manzilga biz yuqorida o'rgangan title(), upper(), lower() , capitalize() metodlarini qo'llab ko'ring.
+print(f"{kocha.title()} ko'chasi, {mahalla.title()} mahallasi, {tuman.upper()} tumani, {viloyat.upper()} viloyati")
