@@ -82,10 +82,67 @@
 # print("Siz",2024-yosh, "yilda tug'ilgansiz!")
 
 # Foydalanuvchidan ikki son kiritshni so'rab, kiritilgan sonlarning yig'indisi, ayirmasi, ko'paytmasi va bo'linmasini chiqaruvchi dastur
-kirish = input("Siz ikta son kiritasiz, men esa bu sonlar ustida 4 ta asosiy matematik amallarni bajaraman!(Davom ettirish uchun 'Enter' ni bosing)")
-son1 = int(input("Birinchi sonni kiriting: "))
-son2 = int(input("Ikkinchi sonni kiriting: "))
-print(f"{son1} + {son2} = {son1+son2}")
-print(f"{son1} - {son2} = {son1-son2}")
-print(f"{son1} * {son2} = {son1*son2}")
-print(f"{son1} / {son2} = {son1//son2}")
+# kirish = input("Siz ikta son kiritasiz, men esa bu sonlar ustida 4 ta asosiy matematik amallarni bajaraman!(Davom ettirish uchun 'Enter' ni bosing)")
+# son1 = int(input("Birinchi sonni kiriting: "))
+# son2 = int(input("Ikkinchi sonni kiriting: "))
+# print(f"{son1} + {son2} = {son1+son2}")
+# print(f"{son1} - {son2} = {son1-son2}")
+# print(f"{son1} * {son2} = {son1*son2}")
+# print(f"{son1} / {son2} = {son1//son2}")
+
+
+# LISTS
+# AMALIYOT
+# Quyidagi mashqlarni bajaring:
+# ismlar degan ro'yxat yarating va kamida 3 ta yaqin do'stingizning ismini kiriting
+# ismlar = ['Sardor', 'Boymurod', 'Davlatyor']
+# Ro'yxatdagi har bir do'stingizga qisqa xabar yozib konsolga chiqaring: 
+# print("Assalomu alaykum do'stim", ismlar[0])
+# print("Assalomu alaykum do'stim", ismlar[1])
+# print("Assalomu alaykum do'stim", ismlar[2])
+
+# sonlar deb nomlangan ro'yxat yarating va ichiga turli sonlarni yuklang (musbat, manfiy, butun, o'nlik). 
+# sonlar = [5, 3.1415, -2, 22]
+# print(sonlar)
+# Yuqoridagi ro'yxatdagi sonlar ustida turli arifmetik amallar bajarib ko'ring. Ro'yxatdagi ba'zi sonlarning qiymatini o'zgartiring, ba'zilarini esa almashtiring. 
+# sonlar[0] = 15
+# sonlar[1] = sonlar[1]**2
+# sonlar[3] = sonlar[3] - sonlar[0]
+# del sonlar[2]
+# print(sonlar)  
+
+# t_shaxslar va z_shaxslar degan 2 ta ro'yxat yarating va biriga o'zingiz eng ko'p hurmat qilgan tarixiy shaxslarning,
+# ikkinchisiga esa zamonamizdagi tirik bo'lgan shaxslarning ismini kiriting.
+# t_shaxslar = ["Imom Buxoriy", "Al-Xorazmiy", "Abdulla Qodiriy"]
+# z_shaxslar = ["Anvar Narzullayev", "Timur Adhamov", "Abdulloh domla"]
+# Yuqoridagi ro'yxatlarning har biridan bittadan qiymatni sug'urib olib (
+# .pop()), quyidagi ko'rinishda chiqaring:
+# print(f"Men tarixiy shaxslardan {t_shaxslar.pop(0)} bilan,\n\
+# zamonimiz shaxslaridan esa {z_shaxslar.pop(2)} bilan\n\
+# suxbat qurishni xoxlar edim")
+
+# friends nomli bo'sh ro'yxat tuzing va unga .append() yordamida 5-6 ta mehmonga chaqirmoqchi bo'lgan do'stlaringizni kiriting.
+friends = []
+friends.append("Sardor")
+friends.append("Boymurod")
+friends.append("Davlatyor")
+friends.append("Husan")
+# print(friends)
+
+# Yuqoridagi ro'yxatdan mehmonga kela olmaydigan odamlarni .remove() metodi yordamida o'chrib tashlang. 
+# friends.remove("Davlatyor")
+# print(friends)
+
+# Ro'yxatning oxiriga, boshiga va o'rtasiga yangi ismlar qo'shing.
+friends.insert(0, 'Xasan')
+friends.insert(3, "Davlatyor")
+friends.insert(-1, 'Zohirjon')
+print(friends)
+
+# Yangi mehmonlar deb nomlangan bo'sh ro'yxat yarating. .pop() va .append() metodlari yordamida mehmonga kelgan 
+# do'stlaringizning ismini friends ro'yxatidan sug'urib olib, mehmonlar ro'yxatiga qo'shing.
+mehmonlar = []
+mehmonlar.append(friends.pop(1))
+mehmonlar.append(friends.pop(-1))
+mehmonlar.append(friends.pop(3))
+print("\n Kelgan mehmonlar: ",mehmonlar)
