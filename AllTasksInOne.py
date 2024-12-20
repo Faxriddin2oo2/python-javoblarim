@@ -151,7 +151,7 @@
 #08 RO'YXATLAR BILAN ISHLASH
 # AMALIYOT
 # O'zingizga ma'lum davlatlarning ro'yxatini tuzing va ro'yxatni konsolga chiqaring
-davlatlar = ["O'zbekiston", "Saudiya Arabistoni", "Germaniya", "Yaponiya", "Malaysiya", "Indonesiya"]
+# davlatlar = ["O'zbekiston", "Saudiya Arabistoni", "Germaniya", "Yaponiya", "Malaysiya", "Indonesiya"]
 # Ro'yxatning uzunligini konsolga chiqaring
 # print(len(davlatlar))
 
@@ -174,7 +174,7 @@ davlatlar = ["O'zbekiston", "Saudiya Arabistoni", "Germaniya", "Yaponiya", "Mala
 # print(davlatlar)
 
 # 120 dan 1200 gacha bo'lgan juft sonlar ro'yxatini tuzing
-sonlar = list(range(120,1200,2))
+# sonlar = list(range(120,1200,2))
 
 # Ro'yxatdagi sonlar yig'indisini hisoblang va konsolga chiqaring
 # print(sum(sonlar))
@@ -192,20 +192,52 @@ sonlar = list(range(120,1200,2))
 # print(boshi+urta+oxiri)
 
 # taomlar degan ro'yxat yarating va ichiga istalgan 5ta taomni kiriting
-taomlar = ["osh", "manti", "somsa", "beshbarmoq", "lag'mon"]
+# taomlar = ["osh", "manti", "somsa", "beshbarmoq", "lag'mon"]
 
 # nonushta degan yangi ro'yxatga taomlardan nusxa oling
-nonushta = []
+# nonushta = []
 
 # Yangi ro'yxatda faqat nonushtaga yeyiladigan taomlarni qoldiring, va qo'shimcha 2 ta taom qo'shing
-nonushta.append(taomlar.pop(0))
-nonushta.append(taomlar.pop(1))
-nonushta.append("saryog'")
-nonushta.append("qaymoq")
-print(nonushta)
+# nonushta.append(taomlar.pop(0))
+# nonushta.append(taomlar.pop(1))
+# nonushta.append("saryog'")
+# nonushta.append("qaymoq")
+# print(nonushta)
 # Ikkala ro'yxatni ham (taomlar va nonushta) konsolga chiqaring
 
 # Yuqoridagi nonushta ro'yxatini o'zgarmas ro'yxatga aylantiring va nonushta[0] = "qaymoq va non" deb qiymat berib ko'ring.
-nonushta = tuple(nonushta)
+# nonushta = tuple(nonushta)
 # nonushta[0] = 'qaymoq va non' # We all knew that will be the error
-print(nonushta)
+# print(nonushta)
+
+
+# FOR LOOP
+# AMALIYOT
+# Kamida 5 elementdan iborat ismlar degan ro'yxat tuzing, va ro'yxatdagi har bir ismga takrorlanuvchi xabar yozing
+# ismlar = ["Sardor", "Boymurod", "Davlatyor", "Zohirjon", "Husan"]
+# for ism in ismlar:
+#     print(f"Assalomu aleykum, hush kelibsan {ism}!")
+# print(f"Kod {len(ismlar)} marta takrorlandi")
+# Yuoqirdagi tsikl tugaganidan so'ng, ekranga "Kod n marta takrorlandi" degan xabarni chiqaring (n o'rniga kod necha marta takrorlanganini yozing)
+
+# 10 dan 100 gacha bo'lgan toq sonlar ro'yxatini tuzing. Ro'yxatning xar bir elementining kubini yangi qatordan konsolga chiqaring.
+# sonlar = range(11,100,2)
+# for son in sonlar:
+#     print(f"{son} ning kubi {son**3}")
+
+# Foydalanuvchidan 5 ta eng sevimli kinolarini kiritshni so'rang, va kinolar degan ro'yxatga saqlab oling. Natijani konsolga chiqaring.
+# kinolar = []
+# print("Sevimli 5 ta kinongizni kiriting!")
+# for n in range(5):
+#     kinolar.append(input(f"Sizga yoqadigan {n+1} chi kinoni kiriting: "))
+# print(kinolar)
+
+# Foydalanuvchidan bugun nechta odam bilan uchrashganini (suhbatlashganini) so'rang, 
+# va har bir suhbatlashgan odamning ismini birma-bir so'rab ro'yxatga yozing. Ro'yxatni konsolga chiqaring.
+# son = int(input("Bugun nechta odam bilan ko'rishdingiz?\n>>>"))
+# odamlar = []
+# print(f"Shu {son} ta odamni ismlarini ayting")
+# for n in range(son):
+#     odamlar.append(input(f"Ko'rishganiz {n+1} chi odamiz: "))
+
+# print("Siz ko'rishgan odamlar: ",odamlar)
