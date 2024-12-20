@@ -44,7 +44,7 @@
 # aylana_yuzi = pi * radius**2
 # print("Radiusi" , radius, "ga teng aylananing yuzi=", aylana_yuzi)
 
-
+# STRING
 # AMALIYOT
 # Quyidagi mashqlarni bajaring:
 # Quyidagi o'zgaruvchilarni yarating: 
@@ -57,14 +57,35 @@
 # print(f"{kocha} ko'chasi, {mahalla} mahallasi, {tuman} tumani, {viloyat} viloyati")
 
 # Yuqoridagi o'zgaruvchilarning (kocha, mahalla, tuman, viloyat) qiymatini foydalanuvchidan so'rang. Va avvalgi mashqni takrorlang.
-kocha=input("Ko'chani nomini kiriting: ")
-mahalla=input("Mahalla nomini kiriting: ")
-tuman=input("Tuman nomini kiriting: ")
-viloyat=input("Viloyat nomini kiriting: ")
+# kocha=input("Ko'chani nomini kiriting: ")
+# mahalla=input("Mahalla nomini kiriting: ")
+# tuman=input("Tuman nomini kiriting: ")
+# viloyat=input("Viloyat nomini kiriting: ")
 # print(f"{kocha} ko'chasi, {mahalla} mahallasi, {tuman} tumani, {viloyat} viloyati")
 
 # Yuqoridagi matnni konsolga chiqarishda har bir verguldan keyin yangi qatordan yozing
 # print(f"{kocha} ko'chasi,\n{mahalla} mahallasi,\n{tuman} tumani,\n{viloyat} viloyati")
 # Yuqoridagi matnni f-string yordamida, yangi, manzil deb nomlangan o'zgaruvchiga yuklang
 # manzilga biz yuqorida o'rgangan title(), upper(), lower() , capitalize() metodlarini qo'llab ko'ring.
-print(f"{kocha.title()} ko'chasi, {mahalla.title()} mahallasi, {tuman.upper()} tumani, {viloyat.upper()} viloyati")
+# print(f"{kocha.title()} ko'chasi, {mahalla.title()} mahallasi, {tuman.upper()} tumani, {viloyat.upper()} viloyati")
+
+
+# SONLAR
+# AMALIYOT
+# Quyidagi dasturlarning har birini alohida fayl ko'rinishida yozing va bajaring:
+# Foydalanuvchi kiritgan sonning kvadrati va kubini konsolga chiqaruvchi dastur
+# son = int(input("Son kiriting, men esa uning kvadrat va kubini hisoblab beraman: "))
+# print(f"{son} ning kvadrati {son**2}\n{son} ning kubi {son**3} ")
+
+# Foydalanuvchining yoshini so'rab, uning tug'ilgan yilini hisoblab, konsolga chiqaruvchi dastur
+# yosh = int(input("Siz yoshingizni ayting men esa sizni nechanchi yilda tugilganingizni aytaman: "))
+# print("Siz",2024-yosh, "yilda tug'ilgansiz!")
+
+# Foydalanuvchidan ikki son kiritshni so'rab, kiritilgan sonlarning yig'indisi, ayirmasi, ko'paytmasi va bo'linmasini chiqaruvchi dastur
+kirish = input("Siz ikta son kiritasiz, men esa bu sonlar ustida 4 ta asosiy matematik amallarni bajaraman!(Davom ettirish uchun 'Enter' ni bosing)")
+son1 = int(input("Birinchi sonni kiriting: "))
+son2 = int(input("Ikkinchi sonni kiriting: "))
+print(f"{son1} + {son2} = {son1+son2}")
+print(f"{son1} - {son2} = {son1-son2}")
+print(f"{son1} * {son2} = {son1*son2}")
+print(f"{son1} / {son2} = {son1//son2}")
