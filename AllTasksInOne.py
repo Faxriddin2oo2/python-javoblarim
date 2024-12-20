@@ -22,4 +22,26 @@
 # print("Katetlari 6 va 7 bo'lgam to'g'ri burchakli uchburchakning gipotenuzasi:", (6**2+7**2)**0.5)
 
 
+# AMALIYOT
+# Quyidagi mashqlarni bajaring:
+# "Hello World!" matnini yangi o'zgaruvchiga yuklang va print() yordamida konsolga chiqaring
+# x = "Hello World!"
+# print(x)
+
+# xabar deb nomlangan o'zgaruvchiga biror matn yuklang va konsolga chiqaring, keyin esa o'zgaruvchiga yangi qiymat berib uni ham konsolga chiqaring.
+# xabar="Assalomu alaykum"
+# print(xabar)
+# xabar="Vaaleykum assalom"
+# print(xabar)
+
+# class den nomlangan o'zgaruvchi yarating, unga biror qiymat bering va konsolga chiqaring (siz kutgan natija chiqdimi?)
+# class=123
+# print(class) # Bu xato bo'lishi oydin masala edi
+
+# Quyidagi kodni bajaring:
+# radius = 5
+# pi = 3.14159
+# aylana_yuzi = pi * radius**2
+# print("Radiusi" , radius, "ga teng aylananing yuzi=", aylana_yuzi)
+
 
