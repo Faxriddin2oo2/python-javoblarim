@@ -366,7 +366,60 @@
 #     print(f"Xush kelibsiz, {savol.title()}")
 
 # Foydalanuvchidan biror butun son kiritishni so'rang. Foydalanuvchi kiritgan sonni 2 da 10 gacha bo'lgan sonlardan qay biriga qoldiqsiz bo'linishini konsolga chiqaring. 
-son = int(input("Son kiriting: "))
-for n in range(2,11):
-    if son%n==0:
-        print(f"{son} {n} ga qoldiqsiz bo'linadi")
+# son = int(input("Son kiriting: "))
+# for n in range(2,11):
+#     if son%n==0:
+#         print(f"{son} {n} ga qoldiqsiz bo'linadi")
+
+
+# DICTIONARY
+# otam (onam, akam, ukam, va hokazo) degan lug'at yarating va lug'atga shu inson haqida kamida 3 ta m'alumot kiriting (ismi, tu'gilgan yili, shahri, manzili va hokazo). 
+# Lug'atdagi ma'lumotni matn shaklida konsolga chiqaring :Otamning ismi Mavlutdin, 1954-yilda, Samarqand viloyatida tug'ilgan
+# otam = {
+#     "ism" : "Sharofiddin",
+#     "t_yil" : 1970,
+#     "t_joy" : "Sariosiyo"
+# }
+# print(f"Mening dadamning ismlari {otam["ism"]}, ular {otam["t_yil"]} yilda {otam['t_joy']} tumanida da tug'ilganlar")
+
+# Oila a'zolaringizning sevimli taomlari lug'atini tuzing. Lug'atda kamida 5 ta ism-taom jufltigi bo'lsin. 
+# Kamida uch kishining sevimli taomini konsolga chiqaring: Alining sevimli taomi osh
+# oilam_taomlari= {
+#     "dadam" : "palov",
+#     "ayam" : "baliq",
+#     "akam" : "manti",
+#     "men" : "osh",
+#     "singlim" : "pizza"
+# }
+# print(f" Dadamning sevimli taomlari {oilam_taomlari['dadam']}")
+# print(f" Ayamning sevimli taomlari {oilam_taomlari['ayam']}")
+# print(f" Akamning sevimli taomlari {oilam_taomlari['akam']}")
+# for odam, taom in oilam_taomlari.items():
+#     print(f" {odam.title()}ning sevimli taomlari {taom}")
+
+# Python izohli lu'gati tuzing: Lug'atga shu kunga qadar o'rgangan 10 ta so'z (atamani) kiriting (masalan integer, float, string, if, else va hokazo) 
+# va har birining qisqacha tarjimasini yozing.
+# Foydalanuvchidan biror so'z kiritishni so'rang va so'zning tarjimasini yuqoridagi lug'atdan chiqarib bering. Agar so'z lu'gatda mavjud bo'lmasa, 
+# "Bunda so'z mavjud emas" degan xabarni chiqaring.
+# izohli_lugat = {
+#     "int":"Butun sonlar",
+#     "float" : "O'nlik sonlar",
+#     "string" : "Teks malumotlar turi",
+#     "if" : "Agar sharti",
+#     "else": "if ning tugatuvchi sherigi",
+#     "dictionary" : "Lug'at",
+#     "list" : "Ro'yxat",
+#     "for" : "Sikl",
+#     "print" : "Konsolga natijani chiqarish",
+# }
+
+# savol = input("Biron bir python terminini kiriting, men esa agar bilsam sizga uni nimaligini aytaman.\n>>>")
+# javob = izohli_lugat.get(savol.lower(),"Bunday so'z mavjud emas")
+# print(f"{savol.lower()} - {javob}, degani")
+
+# if savol.lower() in izohli_lugat.keys():
+#     print(izohli_lugat[savol.lower()])
+# else:
+#     print("Men bu so'zni Pythonda borligini bilmas ekanman!")
+
+# Yuqoridagi vazifani if-else yordamida qiling va natijani ham foydalanuvchiga tushunarli ko'rinishda chiqaring.
