@@ -404,7 +404,7 @@
 # izohli_lugat = {
 #     "int":"Butun sonlar",
 #     "float" : "O'nlik sonlar",
-#     "string" : "Teks malumotlar turi",
+#     "string" : "Tekst malumotlar turi",
 #     "if" : "Agar sharti",
 #     "else": "if ning tugatuvchi sherigi",
 #     "dictionary" : "Lug'at",
@@ -421,5 +421,61 @@
 #     print(izohli_lugat[savol.lower()])
 # else:
 #     print("Men bu so'zni Pythonda borligini bilmas ekanman!")
-
 # Yuqoridagi vazifani if-else yordamida qiling va natijani ham foydalanuvchiga tushunarli ko'rinishda chiqaring.
+
+
+#15 LUG'AT ELEMENTLARI BILAN ISHLASH
+# # AMALIYOT
+# Python izohli lug'atini yarating va lug'atga kamida 10 ta so'z qo'shing. Lug'atdagi har bir kalit va qiymatni for tsikli yordamida, 
+# alifbo ketma-ketligida chiroyli qilib konsolga chiqaring. 
+# for keys, values in sorted(izohli_lugat.items()):
+#     print(f"{keys} ning ma'nosi - {values.capitalize()}")
+
+# Davlatlar va ularning poytaxtlari lug'atini tuzing. Avval lug'atdagi davlatlarni, keyin poytaxtlarni alohida-alohida, alifbo ketma-ketligida konsolga chiqaring. 
+# poytaxtlar = {
+#     "O'zbekiston" : "Toshkent",
+#     "Russia" : "Moskow",
+#     "USA" : "Washington D.C.",
+#     "Spain" : "Madrid",
+#     "Saudia Arabia" : "Ar-Riyadh",
+#     "Italy" : "Rome",
+#     "France" : "Paris",
+#     "Germany" : "Berlin"
+# }
+# print("Dunyo davlatlari: ")
+# for davlat in poytaxtlar.keys():
+#     print(davlat.upper())
+# print("Davlatlarning poytaxtlari: ")
+# for poytaxt in sorted(poytaxtlar.values()):
+#     print(poytaxt)
+# Foydalanuvchidan istalgan davlatni kiritishni so'rang va shu davlatning poytaxtini konsolga chiqaring. 
+# Agar foydalanuvchi lug'atda yo'q davlatni kiritsa, "Bizda bunday ma'lumot yo'q" degan xabarni chiqaring.
+# savol = input("Siz menga davlatning nomini ayting, agar men bilsam uning poytaxtini aytaman. \n>>>")
+# if savol.capitalize() in poytaxtlar.keys():
+#     print(f"{savol.capitalize()} ning poytaxti {poytaxtlar[savol.capitalize()]}")
+# else:
+#     print("Bizda bunday ma'lumot yo'q")
+
+# Restoran menusi lug'atini tuzing (kamida 10 ta taom-narh juftligini kiriting). Foydalanuvchidan 3 ta ovqat buyurtma berishni so'rang. 
+# Foydalanuvchi kiritgan taomlarni menu bilan solishtiring, agar taom menuda bo'lsa narhini ko'rsating, aks holda "bizda bunday taom yo'q" degan xabarni chiqaring.
+menu = {
+    "osh" : 18000,
+    "lag'mon" : 22000,
+    "manti" : 5000,
+    "gumma" : 4000,
+    "beshbarmoq": 80000,
+    "sho'rva" : 20000,
+    "bifshteks" : 25000,
+    "norin" : 28000,
+    "moshkichiri" : 60000,
+    "somsa" : 7000,
+    "kabob" : 12000
+}
+buyurtma = []
+for n in range(3):
+    buyurtma.append(input(f"Iltimos {n+1} chi taomni tanglang\n>>>"))
+for taom in buyurtma:
+    if taom in menu.keys():
+        print(f"{taom.capitalize()} ning narhi - {menu[taom]} so'm")
+    else:
+        print(f"Afsuski bizda {taom} yo'q")
