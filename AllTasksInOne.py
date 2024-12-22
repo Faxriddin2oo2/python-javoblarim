@@ -458,24 +458,121 @@
 
 # Restoran menusi lug'atini tuzing (kamida 10 ta taom-narh juftligini kiriting). Foydalanuvchidan 3 ta ovqat buyurtma berishni so'rang. 
 # Foydalanuvchi kiritgan taomlarni menu bilan solishtiring, agar taom menuda bo'lsa narhini ko'rsating, aks holda "bizda bunday taom yo'q" degan xabarni chiqaring.
-menu = {
-    "osh" : 18000,
-    "lag'mon" : 22000,
-    "manti" : 5000,
-    "gumma" : 4000,
-    "beshbarmoq": 80000,
-    "sho'rva" : 20000,
-    "bifshteks" : 25000,
-    "norin" : 28000,
-    "moshkichiri" : 60000,
-    "somsa" : 7000,
-    "kabob" : 12000
-}
-buyurtma = []
-for n in range(3):
-    buyurtma.append(input(f"Iltimos {n+1} chi taomni tanglang\n>>>"))
-for taom in buyurtma:
-    if taom in menu.keys():
-        print(f"{taom.capitalize()} ning narhi - {menu[taom]} so'm")
-    else:
-        print(f"Afsuski bizda {taom} yo'q")
+# menu = {
+#     "osh" : 18000,
+#     "lag'mon" : 22000,
+#     "manti" : 5000,
+#     "gumma" : 4000,
+#     "beshbarmoq": 80000,
+#     "sho'rva" : 20000,
+#     "bifshteks" : 25000,
+#     "norin" : 28000,
+#     "moshkichiri" : 60000,
+#     "somsa" : 7000,
+#     "kabob" : 12000
+# }
+# buyurtma = []
+# for n in range(3):
+#     buyurtma.append(input(f"Iltimos {n+1} chi taomni tanglang\n>>>"))
+# for taom in buyurtma:
+#     if taom in menu.keys():
+#         print(f"{taom.capitalize()} ning narhi - {menu[taom]} so'm")
+#     else:
+#         print(f"Afsuski bizda {taom} yo'q")
+
+
+#16 NESTING
+# AMALIYOT
+# Adabiyot (ilm-fan, san'at, internet) olamidagi 4 ta mashxur shaxlar haqidagi ma'lumotlarni lug'at ko'rinishida saqlang. Lug'atlarni bitta ro'yxatga joylang,
+#  va har bir shaxs haqidagi ma'lumotni konsolga chiqaring.
+# buxoriy = {'ism':'Abu Abdulloh Muhammad ibn Ismoil',
+#            'tyil':810,
+#            'vyil':870,
+#            'tjoy':'Buxoro',
+#            'asarlar':["Al-jome’ as-sahih", "Al-adab al-mufrad", "At-tarix al-kabir", "At-tarix as-sag‘ir"]
+#            }
+
+# qodiriy = {'ism':'Abdulla Qodiriy',
+#            'tyil':1894,
+#            'vyil':1938,
+#            'tjoy':'Toshkent',
+#            'asarlar':["O'tkan kunlar","Mehrobdan Chayon",'Obid ketmon']
+#            }
+
+# vohidov = {'ism':'Erkin Vohidov',
+#            'tyil':1936,
+#            'vyil':2016,
+#            'tjoy':"Farg'ona",
+#            'asarlar':["Tong nafasi","Qo'shiqlarim sizga","O'zbegim","Qiziquvchan Matmusa"]
+#            }
+
+# navoiy = {'ism':'Alisher Navoiy',
+#            'tyil':1441,
+#            'vyil':1501,
+#            'tjoy':"Xirot",
+#            'asarlar':["Xamsa","Lison ut-Tayr","Mahbub Al-Qulub",'Munojot']
+#            }
+# shaxslar = [buxoriy, qodiriy, vohidov, navoiy]
+
+# for shaxs in shaxslar:
+#     print(f"{shaxs['ism']}, {shaxs['tyil']} yil {shaxs['tjoy']}da tug'ilgan va " 
+#         f"{shaxs['vyil']-shaxs['tyil']} yil umr ko'rib {shaxs['vyil']} yilda vafot topgan")
+
+# Yuqoridagi lug'atlarga har bir shaxsning mashxur asarlari ro'yxatini ham qo'shing. For tsikli yordamida muallifning ismi va uning asarlarini konsolga chiqaring.
+# for shaxs in shaxslar:
+#     ism = shaxs['ism']
+#     asarlar = shaxs['asarlar']
+#     print(f"\n{ism} ning mashxur asarlari: ")
+#     for asar in asarlar:
+#         print(asar)
+
+# Oila a'zolaringiz (do'stlaringiz) dan 3 ta sevimli kino-seriali haqida so'rang. 
+# Do'stingiz ismi kalit, uning sevimli kinolarini esa ro'yxat ko'rinishida lug'artga saqlang. Natijani konsolga chiqaring.
+# yaqinlar = {
+#     'Sardor' : [],
+#     'Fazliddin' : [],
+#     'Boymurod' : [],
+# }
+# for ism, film in yaqinlar.items():
+#     for n in range(3):
+#         savol = input(f"{ism} yaxshi korgan {n+1} chi filmingizni yoki serialingizni ayting\n>>>")
+#         yaqinlar[ism].append(savol)
+
+#     print(f"{ism} ning yaxshi ko'rgan film va seriallar: ")
+#     for kino in film:
+#         print(kino.capitalize())
+
+# Davlatlar degan lug'at yarating, lug'at ichida bir nechta davlatlar haqida ma'lumotlarni lug'at ko'rinishida saqlang. 
+# Har bir davlat haqida ma'lumotni konsolga chiqaring.
+# davlatlar = {
+#     "o'zbekiston":{'poytaxt':"toshkent",
+#                    'maydon':448978,
+#                    'aholi':33_000_000,
+#                    'pul birligi':"so'm"
+#                    },
+#     "rossiya":{'poytaxt':"moskva",
+#                    'maydon':17_098_246,
+#                    'aholi':144_000_000,
+#                    'pul birligi':"rubl"
+#                    },
+#     "aqsh":{'poytaxt':"vashington",
+#                    'maydon':9_631_418,
+#                    'aholi':327_000_000,
+#                    'pul birligi':"dollar"},
+#     "malayziya":{'poytaxt':"kuala-lumpur",
+#                    'maydon':329750,
+#                    'aholi':25_000_000,
+#                    'pul birligi':"rinngit"}
+#     }
+
+# for davlat, info in davlatlar.items():
+#     print(f"\n{davlat.capitalize()} ning poytaxt {info['poytaxt'].title()}\nHududi: {info['maydon']}\nAholisi: {info['aholi']}\nPul birligi: {info['pul birligi']}")
+
+# Yuqoridagi dasturga o'zgartirish kiriting: konsolga barcha davlatlarni emas, foydalanuvchi so'ragan davlat haqida ma'lumot bering. 
+# Agar davlat sizning lug'atingizda mavjud bo'lmasa, "Bizda bu davlat haqida ma'lumot yo'q" degan xabarni chiqaring.
+# savol = input("Davlatni kiriting, men sizga u haqida ma'lumot beraman\n>>>")
+# if savol.lower() in davlatlar.keys():
+#     info = davlatlar[savol.lower()]
+#     print(f"\n{savol.capitalize()} ning poytaxt {info['poytaxt'].title()}\nHududi: {info['maydon']}\nAholisi: {info['aholi']}\nPul birligi: {info['pul birligi']}")
+# else:
+#     print(f"Afsuski, bizda {savol.title()} haqida ma'lumot yo'q")
