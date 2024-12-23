@@ -646,15 +646,68 @@
 
 # Yuqoridagi ikki dasturni jamlaymiz. Foydalanuvchi buyurtmasi ro'yxatidagi har bir mahsulotni e-bozordagi mahsulotlar bilan solishitiring 
 # (tayyor ro'yxat ishlatishingiz mumkin). Agar mahsuot e-bozorda mavjud bo'lsa mahsulot narhini chiqaring, aks holda "Bizda bu mahsulot yo'q" degan xabarni kor'sating.
-buyurtmalar = ['olma','anjir','uzum','qovun']
-mahsulotlar = {'olma':20000,
-               'shaftoli':25000,
-               'tarvuz':18000,
-               'uzum':22000}
+# buyurtmalar = ['olma','anjir','uzum','qovun']
+# mahsulotlar = {'olma':20000,
+#                'shaftoli':25000,
+#                'tarvuz':18000,
+#                'uzum':22000}
 
-while buyurtmalar:
-    buyurtma = buyurtmalar.pop()
-    if buyurtma in mahsulotlar.keys():
-        print(f"{buyurtma.title()}ning narhi {mahsulotlar[buyurtma]}")
-    else:
-        print(f"Afsuski bizda {buyurtma} yo'q")
+# while buyurtmalar:
+#     buyurtma = buyurtmalar.pop()
+#     if buyurtma in mahsulotlar.keys():
+#         print(f"{buyurtma.title()}ning narhi {mahsulotlar[buyurtma]}")
+#     else:
+#         print(f"Afsuski bizda {buyurtma} yo'q")
+
+
+#19 FUNKSIYA
+# AMALIYOT
+# Foydalanuvchi ismi va yoshini so'rab, uning tug'ilgan yilini hisoblaydigan funksiya yozing.
+# def info(ism, yosh):
+#     return f"Assalomu alaykum {ism.capitalize()}, sizning tug'ilgan yilingiz: {2024-yosh}"
+
+# print(info('faxriddin',22))
+
+# Foydalanuvchidan son olib, uning kvadrati va kubini konsolga chiqaruvchi funksiya yozing.
+# def kvadrat_kub(son):
+#     return f"{son} ning kvadrati - {son**2}, kubi esa - {son**3}"
+
+# print(kvadrat_kub(5))
+
+# Foydalanuvchidan son olib, son juft yoki toqligini konsolga chiqaruvchi funksiya yozing.
+# def juft_toq(son):
+#     if son % 2 == 0:
+#         return f"{son} juft son!"
+#     else:
+#         return f"{son} toq son!"
+
+# print(juft_toq(8))
+
+# Foydalanuvchidan ikkita son olib, ulardan kattasini konsolga chiqaruvchi funksiya yozing. Agar sonlar teng bo'lsa "Sonlar teng" degan xabarni chiqaring.
+# def bigger(son1, son2):
+#     if son1 > son2:
+#         max = son1
+#     elif son1 < son2:
+#         max = son2
+#     else:
+#         return "Sonlar teng!"
+#     return f"{max} kattaroq son!"
+
+# print(bigger(5,7))
+
+# Foydalanuvchidan x va y sonlarini olib, x darajasida y ni qaytaradigan function yarating
+# Yuqoridagi funksiyada y uchun 2 standart qiymatini bering.
+# def daraja(x,y=2):
+#     """x darajasida y ni qaytaradigan function"""
+#     return f"{x} ning {y} chi darajasi - {x**y}"
+
+# print(daraja(9))
+
+# Foydalanuvchidan son qabul qilib, sonni 2 dan 10 gacha bo'lgan sonlarga qoldiqsiz bo'linishini tekshiruvchi funksiya yozing. Natijalarni konsolga chiqaring.
+def bolinish_alomatlari(son):
+
+    for n in range(2, 11):
+        if son % n == 0:
+             print(f"{son} {n} ga qoldiqsiz bo'linadi")
+
+bolinish_alomatlari(70)
