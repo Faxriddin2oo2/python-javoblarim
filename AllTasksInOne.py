@@ -590,24 +590,71 @@
 # Muzeyga chipta narhi foydalanuvchining yoshiga bog'liq: 7 dan yoshlarga - 2000 so'm, 7-18 gacha 3000 so'm, 18-65 gacha 10000 so'm, 65 dan kattalarga bepul. 
 # Shunday while tsikl yozingki, dastur foydalanuvchi yoshini so'rasin va chipta narhini chiqarsin. Foydalanuvchi exit yoki quit deb yozganda dastur to'xtasin 
 # (ikkita shartni ham tekshiring).
-ishora = True
-while ishora:
-    yosh = int(input("Yoshingiz nechida: "))
-    if yosh <= 7 and yosh > 0:
-        narh = 2000
-    elif yosh < 18:
-        narh = 3000
-    elif yosh < 65:
-        narh = 10000
-    else:
-        narh = 'bepul'
-    print(f"Siz uchun muzeyga kirish - {narh}")
-    savol = input("Yana davom etishni hohlaysizmi? (yes/no)\n>>>")
-    if savol == 'yes':
-        continue
-    else:
-        ishora = False
-
+# ishora = True
+# while ishora:
+#     yosh = int(input("Yoshingiz nechida: "))
+#     if yosh <= 7 and yosh > 0:
+#         narh = 2000
+#     elif yosh < 18:
+#         narh = 3000
+#     elif yosh < 65:
+#         narh = 10000
+#     else:
+#         narh = 'bepul'
+#     print(f"Siz uchun muzeyga kirish - {narh}")
+#     savol = input("Yana davom etishni hohlaysizmi? (yes/no)\n>>>")
+#     if savol == 'yes':
+#         continue
+#     else:
+#         ishora = False
 # Yuqoridagi dasturni turli usullarda yozib ko'ring (break, ishora, yoki shart tekshirish)
 
-# Quyidagi dasturda bir nechta mantiqiy xatolar bor. Jumladan, xusisiy holatlarda tsikl abadiy qaytarilib qolmoqda. Xatolarni to'g'rilay olasizmi?
+
+#18 WHILE, RO'YXATLAR VA LUG'ATLAR
+# AMALIYOT
+# Foydalanuvchidan buyurtma qabul qiluvchi dastur yozing. Mahsulotlar nomini birma-bir qabul qilib, yangi ro'yxatga joylang.
+# buyurtma = []
+
+# while True:
+#     savol = input("Taomni nomini kiriting(agar to'xtatmoqchi bo'lsangiz 'exit' deb yozing): ")
+#     if savol != 'exit':
+#         buyurtma.append(savol)
+#     else:
+#         break
+# print(buyurtma)
+
+# e-bozor uchun mahsulotlar va ularning narhlari lug'atini shakllantiruvchi dastur yozing. 
+# Foydalanuvchidan lug'atga bir nechta elementlar (mahsulot va uning narhi) kiritishni so'rang.
+# e_bozor = {}
+# print("Keling bozorlik qilamiz!")
+# while True:
+#     mahsulot = input(f"Mahsulotni kiriting: ")
+#     kg = float(input(f"{mahsulot.title()} dan nechi kg olmoqchisiz: "))
+#     narh = int(input(f"{mahsulot.title()}ning narhini kiriting: "))
+#     e_bozor[mahsulot] = narh * kg
+#     savol = input("Yana mahsulot kiritasizmi?(yes/no)\n>>>")
+#     if savol == 'yes':
+#         continue
+#     else:
+#         break
+
+# print("\nSiz tanlagan mahsulotlar: ")
+# for mahsulot, narh in e_bozor.items():
+#     print(f"{mahsulot.title()} {narh} so'mlik")
+
+# print(f"Umumiy {sum(e_bozor.values())} so'm bo'ldi")
+
+# Yuqoridagi ikki dasturni jamlaymiz. Foydalanuvchi buyurtmasi ro'yxatidagi har bir mahsulotni e-bozordagi mahsulotlar bilan solishitiring 
+# (tayyor ro'yxat ishlatishingiz mumkin). Agar mahsuot e-bozorda mavjud bo'lsa mahsulot narhini chiqaring, aks holda "Bizda bu mahsulot yo'q" degan xabarni kor'sating.
+buyurtmalar = ['olma','anjir','uzum','qovun']
+mahsulotlar = {'olma':20000,
+               'shaftoli':25000,
+               'tarvuz':18000,
+               'uzum':22000}
+
+while buyurtmalar:
+    buyurtma = buyurtmalar.pop()
+    if buyurtma in mahsulotlar.keys():
+        print(f"{buyurtma.title()}ning narhi {mahsulotlar[buyurtma]}")
+    else:
+        print(f"Afsuski bizda {buyurtma} yo'q")
