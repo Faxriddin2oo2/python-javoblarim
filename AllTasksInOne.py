@@ -576,3 +576,38 @@
 #     print(f"\n{savol.capitalize()} ning poytaxt {info['poytaxt'].title()}\nHududi: {info['maydon']}\nAholisi: {info['aholi']}\nPul birligi: {info['pul birligi']}")
 # else:
 #     print(f"Afsuski, bizda {savol.title()} haqida ma'lumot yo'q")
+
+
+#17 WHILE TSIKLI
+# AMALIYOT
+# Foydalanuvchidan yaxshi ko'rgan kitoblarini kiritishni so'rang. Foydalanuvchi stop so'zini yozishi bilan dasturni to'xtating
+# while True:
+#     savol = input("O'ziz yaxshi korgan kitobni kiriting(Agar to'xtatishni istasangiz 'stop' deb yozing):\n>>>")
+#     if savol == 'stop':
+#         break
+# print("Dastur to'xtatildi!")
+
+# Muzeyga chipta narhi foydalanuvchining yoshiga bog'liq: 7 dan yoshlarga - 2000 so'm, 7-18 gacha 3000 so'm, 18-65 gacha 10000 so'm, 65 dan kattalarga bepul. 
+# Shunday while tsikl yozingki, dastur foydalanuvchi yoshini so'rasin va chipta narhini chiqarsin. Foydalanuvchi exit yoki quit deb yozganda dastur to'xtasin 
+# (ikkita shartni ham tekshiring).
+ishora = True
+while ishora:
+    yosh = int(input("Yoshingiz nechida: "))
+    if yosh <= 7 and yosh > 0:
+        narh = 2000
+    elif yosh < 18:
+        narh = 3000
+    elif yosh < 65:
+        narh = 10000
+    else:
+        narh = 'bepul'
+    print(f"Siz uchun muzeyga kirish - {narh}")
+    savol = input("Yana davom etishni hohlaysizmi? (yes/no)\n>>>")
+    if savol == 'yes':
+        continue
+    else:
+        ishora = False
+
+# Yuqoridagi dasturni turli usullarda yozib ko'ring (break, ishora, yoki shart tekshirish)
+
+# Quyidagi dasturda bir nechta mantiqiy xatolar bor. Jumladan, xusisiy holatlarda tsikl abadiy qaytarilib qolmoqda. Xatolarni to'g'rilay olasizmi?
