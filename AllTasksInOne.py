@@ -810,12 +810,28 @@
 # Foydalanuvchidan son qabul qilib, shu son miqdoricha Fibonachchi ketma-ketligidagi sonlar ro'yxatni qaytaruvchi funksiya yozing.  
 # Ta’rif: Har bir hadi o’zidan oldingi ikkita hadning yig’indisiga teng bo’lgan ketma-ketlik Fibonachchi ketma-ketligi deyiladi. 
 # Bunda boshlang’ish had ko’pincha 1 deb olinadi.  1, 1, 2, 3, 5, 8, 13, 21, 34, 55,...
-def fibonacci(n):
-    my_list = []
-    for x in range(n):
-        if x == 0 or x == 1:
-            my_list.append(1)
-        else:
-            my_list.append(my_list[x - 1] + my_list[x - 2])
-    return my_list
-print(fibonacci(5))
+# def fibonacci(n):
+#     my_list = []
+#     for x in range(n):
+#         if x == 0 or x == 1:
+#             my_list.append(1)
+#         else:
+#             my_list.append(my_list[x - 1] + my_list[x - 2])
+#     return my_list
+# print(fibonacci(5))
+
+
+#21 FUNKSIYA VA RO'YXAT
+# AMALIYOT
+# Matnlardan iborat ro'yxat qabul qilib, ro'yxatdagi har bir matnning birinchi harfini katta harfga o'zgatiruvchi funksiya yozing. 
+def katta_harf(my_list):
+    new_list = []
+    for ism in my_list:
+        new_list.append(ism.title())
+    return new_list
+
+        
+
+ismlar = ['ali', 'vali', 'hasan', 'husan']
+print(katta_harf(ismlar))
+print(ismlar)
