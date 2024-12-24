@@ -704,10 +704,118 @@
 # print(daraja(9))
 
 # Foydalanuvchidan son qabul qilib, sonni 2 dan 10 gacha bo'lgan sonlarga qoldiqsiz bo'linishini tekshiruvchi funksiya yozing. Natijalarni konsolga chiqaring.
-def bolinish_alomatlari(son):
+# def bolinish_alomatlari(son):
 
-    for n in range(2, 11):
-        if son % n == 0:
-             print(f"{son} {n} ga qoldiqsiz bo'linadi")
+#     for n in range(2, 11):
+#         if son % n == 0:
+#              print(f"{son} {n} ga qoldiqsiz bo'linadi")
 
-bolinish_alomatlari(70)
+# bolinish_alomatlari(70)
+
+
+#20 QIYMAT QAYTARUVCHI FUNKSIYA
+# AMALIYOT
+# Foydanaluvchidan ismi, familiyasi, tug'ilgan yili, tug'ilgan joyi, email manzili va telefon raqamini qabul qilib, lug'at ko'rinishida qaytaruvchi funksiya yozing. 
+# Lug'atda foydalanuvchu yoshi ham bo'lsin. Ba'zi argumentlarni kiritishni ixtiyoriy qiling (masalan, tel.raqam, el.manzil)
+# def info(ism, familiya, t_yil, t_joy, email, telefon):
+#     full_info = {}
+#     full_info['ism'] = ism
+#     full_info['familiya'] = familiya
+#     full_info['t_yil'] = t_yil
+#     full_info['t_joy'] = t_joy
+#     full_info['email'] = email
+#     full_info['telefon'] = telefon
+#     full_info['yosh'] = 2024-t_yil
+#     return full_info
+
+# print(info('Faxriddin', 'Teshaboyev', 2000, 'Paris', 'fax123@gmail.com',"+009334221"))
+
+# Yuqoridagi funksiyani while yordamida bir necha bor chaqiring, va mijozlar degan ro'yxatni shakllantiring. 
+# Ro'yxatdagi mijozlar haqidagi ma'lumotni konsolga chiqaring.
+# def info():
+#     mijozlar = []
+#     full_info = {}
+#     while True:
+#         ism = input("Ismingizni kiriting: ")
+#         full_info['ism'] = ism
+
+#         familiya = input("Familiyangizni kiriting: ")
+#         full_info['familiya'] = familiya
+
+#         t_yil = int(input("Tug'ilgan yilingizni kiriting: "))
+#         full_info['t_yil'] = t_yil
+
+#         t_joy = input("Tug'ilgan joyingizni kiriting: ")
+#         full_info['t_joy'] = t_joy
+
+#         email = input("Emailingizni kiriting: ")
+#         full_info['email'] = email
+
+#         telefon = input("Telefon raqamingizni kiriting: ")
+#         full_info['telefon'] = telefon
+#         full_info['yosh'] = 2024-t_yil
+
+#         mijozlar.append(full_info)
+#         savol = input("Yana odam qo'shasizmi(yes/no)?: ")
+#         if savol == 'no':
+#             break
+#     return mijozlar
+
+# print(info())
+
+# Uchta son qabul qilib, ulardan eng kattasini qaytaruvchi funksiya yozing
+# def eng_katta(son1, son2, son3):
+#     if son1 > son2 and son1 > son3:
+#         max = son1
+#     elif son2 > son3 and son2 > son1:
+#         max = son2
+#     else:
+#         max = son3
+#     return max
+
+# print(eng_katta(4,9,7))    
+
+# Foydalanuvchidan aylaning radiusini qabul qilib olib, uning radiusini, diametrini, perimetri va yuzini lug'at ko'rinishida qaytaruvchi funksiya yozing
+# def data(radius):
+#     aylana_info = {}
+#     pi = 3.14
+#     aylana_info['radius'] = radius
+#     aylana_info['diametr'] = radius * 2
+#     aylana_info['perimetr'] = 2*pi*radius
+#     aylana_info['yuzi'] = pi*(radius**2)
+#     return aylana_info
+
+# print(data(3))
+
+# Berilgan oraliqdagi tub sonlar ro'yxatini qaytaruvchi funksiya yozing (tub sonlar —faqat birga va o'ziga qoldiqsiz bo'linuvchi, 1 dan katta musbat sonlar)
+# def tub_sonlar_top(min, max):
+#     tub_sonlar = []
+#     for n in range(min, max + 1):
+#         tub = True
+#         if n == 1:
+#             tub = False
+#         elif n == 2:
+#             tub = True
+#         else:
+#             for x in range(2, n):
+#                 if n % x == 0:
+#                     tub = False
+#         if tub:
+#             tub_sonlar.append(n)
+
+#     return tub_sonlar
+
+# print(tub_sonlar_top(4,15))
+
+# Foydalanuvchidan son qabul qilib, shu son miqdoricha Fibonachchi ketma-ketligidagi sonlar ro'yxatni qaytaruvchi funksiya yozing.  
+# Ta’rif: Har bir hadi o’zidan oldingi ikkita hadning yig’indisiga teng bo’lgan ketma-ketlik Fibonachchi ketma-ketligi deyiladi. 
+# Bunda boshlang’ish had ko’pincha 1 deb olinadi.  1, 1, 2, 3, 5, 8, 13, 21, 34, 55,...
+def fibonacci(n):
+    my_list = []
+    for x in range(n):
+        if x == 0 or x == 1:
+            my_list.append(1)
+        else:
+            my_list.append(my_list[x - 1] + my_list[x - 2])
+    return my_list
+print(fibonacci(5))
