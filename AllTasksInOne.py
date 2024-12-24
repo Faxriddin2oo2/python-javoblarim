@@ -824,14 +824,32 @@
 #21 FUNKSIYA VA RO'YXAT
 # AMALIYOT
 # Matnlardan iborat ro'yxat qabul qilib, ro'yxatdagi har bir matnning birinchi harfini katta harfga o'zgatiruvchi funksiya yozing. 
-def katta_harf(my_list):
-    new_list = []
-    for ism in my_list:
-        new_list.append(ism.title())
-    return new_list
+# def katta_harf(my_list):
+#     new_list = []
+#     for ism in my_list:
+#         new_list.append(ism.title())
+#     return new_list
 
-        
+# ismlar = ['ali', 'vali', 'hasan', 'husan']
+# print(katta_harf(ismlar))
+# print(ismlar)
 
-ismlar = ['ali', 'vali', 'hasan', 'husan']
-print(katta_harf(ismlar))
-print(ismlar)
+# 22 MOSLASHUVCHAN FUNKSIYA (*args, **kwargs)
+# AMALIYOT
+# Istalgancha sonlarni qabul qilib, ularning ko'paytmasini qaytaruvchi funksiya yozing
+# def multiple(*sonlar):
+#     kupaytma = 1
+#     for son in sonlar:
+#         kupaytma *= son
+#     return kupaytma
+
+# print(multiple(3,5,6))
+
+# Talabalar haqidagi ma'lumotlarini lug'at ko'rinishida qaytaruvchi funkisya yozing. 
+# Talabaning ismi va familiyasi majburiy argument, qolgan ma'lumotlar esa ixtiyoriy ko'rinishda istalgancha berilishi mumkin bo'lsin.
+# def info(ism, familiya, **malumotlar):
+#     malumotlar['ism'] = ism
+#     malumotlar['familiya'] = familiya
+#     return malumotlar
+
+# print(info('Hasan', "Turayev", t_yil=2005, t_joy='AQSH'))
