@@ -847,9 +847,9 @@
 
 # Talabalar haqidagi ma'lumotlarini lug'at ko'rinishida qaytaruvchi funkisya yozing. 
 # Talabaning ismi va familiyasi majburiy argument, qolgan ma'lumotlar esa ixtiyoriy ko'rinishda istalgancha berilishi mumkin bo'lsin.
-# def info(ism, familiya, **malumotlar):
-#     malumotlar['ism'] = ism
-#     malumotlar['familiya'] = familiya
-#     return malumotlar
+def info(ism, familiya, **malumotlar):
+    malumotlar['ism'] = ism
+    malumotlar['familiya'] = familiya
+    return malumotlar
 
-# print(info('Hasan', "Turayev", t_yil=2005, t_joy='AQSH'))
+print(info('Hasan', "Turayev", t_yil=2005, t_joy='AQSH'))
