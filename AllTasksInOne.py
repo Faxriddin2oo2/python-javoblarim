@@ -887,14 +887,7 @@ import re
 # andoza = "^\\+?[1-9][0-9]{7,14}$"
 # print(re.match(andoza, savol))
 
-
-# andoza_web = "^https?:\\/\\/(?:www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b(?:[-a-zA-Z0-9()@:%_\\+.~#?&\\/=]*)$"
-# text = "Assalom alaykum hurmatli do'stlar. Navbatdagi darsimiz YouTubega yuklandi: https://youtu.be/vsxJPRLXpgI \
-# Ushbu darsimizda unittest moduli yordamida klasslarning xususiyatlar va metodlarini tekshiruvchi dastur yozishni o'rganamiz. \
-# Bugungi dars manzili: https://python.sariq.dev/testing/37-klass-test"
-# web_address = re.findall(andoza_web, text)
-# print(web_address)
-
+# Berilgan matndan veb sahifa manzilini ajratib olyuvchi funksiya yozing. Quyidagi matndan namuna sifatida foydalanishingiz mumkin:
 def extract_urls(text):
     # Simple regex pattern for URLs
     pattern = r'http[s]?://\S+'
