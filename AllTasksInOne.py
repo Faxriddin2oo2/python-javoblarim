@@ -861,10 +861,10 @@
 import datetime as dt
 
 hozir = dt.date.today()
-# final = dt.date(2025, 1, 9)
-# farq = final - hozir
-# for n in range(10):
-#     print(hozir+farq*n)
+final = dt.date(2025, 1, 13)
+farq = final - hozir
+for n in range(10):
+    print(hozir+farq*n)
 
 # Ramazon va qurbon hayitigacha qolgan kunlarni konsolga chiqaring
 # ramazon = dt.date(2025, 3, 1)
@@ -872,7 +872,7 @@ hozir = dt.date.today()
 # print(f"Nasb bo'lsa ramazongacha {(ramazon-hozir).days} kun qoldi, Qurbon hayitiga esa {(qurbon_hayot-hozir).days} kun qoldi")
 
 # Tug'ilgan kuningizdan bugungi sanagacha qancha yil, oy, kun o'tganini qaytaruvchi funksiya yozing
-# t_kun = dt.date(2002, 9, 4)
+# t_kun = dt.date(2004, 1, 5)
 # farq = hozir - t_kun
 # yil = (farq.days)//365
 # oy = (farq.days)//30
@@ -894,8 +894,8 @@ import re
 #     return re.findall(pattern, text)
 
 # # Example usage
-text = "Assalom alaykum hurmatli do'stlar. Navbatdagi darsimiz YouTubega yuklandi: https://youtu.be/vsxJPRLXpgI \
-# Ushbu darsimizda unittest moduli yordamida klasslarning xususiyatlar va metodlarini tekshiruvchi dastur yozishni o'rganamiz. \
-# Bugungi dars manzili: https://python.sariq.dev/testing/37-klass-test"
-urls = extract_urls(text)
-print(urls)
+# text = "Assalom alaykum hurmatli do'stlar. Navbatdagi darsimiz YouTubega yuklandi: https://youtu.be/vsxJPRLXpgI \
+# # Ushbu darsimizda unittest moduli yordamida klasslarning xususiyatlar va metodlarini tekshiruvchi dastur yozishni o'rganamiz. \
+# # Bugungi dars manzili: https://python.sariq.dev/testing/37-klass-test"
+# urls = extract_urls(text)
+# print(urls)
