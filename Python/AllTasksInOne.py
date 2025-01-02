@@ -366,7 +366,536 @@
 #     print(f"Xush kelibsiz, {savol.title()}")
 
 # Foydalanuvchidan biror butun son kiritishni so'rang. Foydalanuvchi kiritgan sonni 2 da 10 gacha bo'lgan sonlardan qay biriga qoldiqsiz bo'linishini konsolga chiqaring. 
-son = int(input("Son kiriting: "))
-for n in range(2,11):
-    if son%n==0:
-        print(f"{son} {n} ga qoldiqsiz bo'linadi")
+# son = int(input("Son kiriting: "))
+# for n in range(2,11):
+#     if son%n==0:
+#         print(f"{son} {n} ga qoldiqsiz bo'linadi")
+
+
+# DICTIONARY
+# otam (onam, akam, ukam, va hokazo) degan lug'at yarating va lug'atga shu inson haqida kamida 3 ta m'alumot kiriting (ismi, tu'gilgan yili, shahri, manzili va hokazo). 
+# Lug'atdagi ma'lumotni matn shaklida konsolga chiqaring :Otamning ismi Mavlutdin, 1954-yilda, Samarqand viloyatida tug'ilgan
+# otam = {
+#     "ism" : "Sharofiddin",
+#     "t_yil" : 1970,
+#     "t_joy" : "Sariosiyo"
+# }
+# print(f"Mening dadamning ismlari {otam["ism"]}, ular {otam["t_yil"]} yilda {otam['t_joy']} tumanida da tug'ilganlar")
+
+# Oila a'zolaringizning sevimli taomlari lug'atini tuzing. Lug'atda kamida 5 ta ism-taom jufltigi bo'lsin. 
+# Kamida uch kishining sevimli taomini konsolga chiqaring: Alining sevimli taomi osh
+# oilam_taomlari= {
+#     "dadam" : "palov",
+#     "ayam" : "baliq",
+#     "akam" : "manti",
+#     "men" : "osh",
+#     "singlim" : "pizza"
+# }
+# print(f" Dadamning sevimli taomlari {oilam_taomlari['dadam']}")
+# print(f" Ayamning sevimli taomlari {oilam_taomlari['ayam']}")
+# print(f" Akamning sevimli taomlari {oilam_taomlari['akam']}")
+# for odam, taom in oilam_taomlari.items():
+#     print(f" {odam.title()}ning sevimli taomlari {taom}")
+
+# Python izohli lu'gati tuzing: Lug'atga shu kunga qadar o'rgangan 10 ta so'z (atamani) kiriting (masalan integer, float, string, if, else va hokazo) 
+# va har birining qisqacha tarjimasini yozing.
+# Foydalanuvchidan biror so'z kiritishni so'rang va so'zning tarjimasini yuqoridagi lug'atdan chiqarib bering. Agar so'z lu'gatda mavjud bo'lmasa, 
+# "Bunda so'z mavjud emas" degan xabarni chiqaring.
+# izohli_lugat = {
+#     "int":"Butun sonlar",
+#     "float" : "O'nlik sonlar",
+#     "string" : "Tekst malumotlar turi",
+#     "if" : "Agar sharti",
+#     "else": "if ning tugatuvchi sherigi",
+#     "dictionary" : "Lug'at",
+#     "list" : "Ro'yxat",
+#     "for" : "Sikl",
+#     "print" : "Konsolga natijani chiqarish",
+# }
+
+# savol = input("Biron bir python terminini kiriting, men esa agar bilsam sizga uni nimaligini aytaman.\n>>>")
+# javob = izohli_lugat.get(savol.lower(),"Bunday so'z mavjud emas")
+# print(f"{savol.lower()} - {javob}, degani")
+
+# if savol.lower() in izohli_lugat.keys():
+#     print(izohli_lugat[savol.lower()])
+# else:
+#     print("Men bu so'zni Pythonda borligini bilmas ekanman!")
+# Yuqoridagi vazifani if-else yordamida qiling va natijani ham foydalanuvchiga tushunarli ko'rinishda chiqaring.
+
+
+#15 LUG'AT ELEMENTLARI BILAN ISHLASH
+# # AMALIYOT
+# Python izohli lug'atini yarating va lug'atga kamida 10 ta so'z qo'shing. Lug'atdagi har bir kalit va qiymatni for tsikli yordamida, 
+# alifbo ketma-ketligida chiroyli qilib konsolga chiqaring. 
+# for keys, values in sorted(izohli_lugat.items()):
+#     print(f"{keys} ning ma'nosi - {values.capitalize()}")
+
+# Davlatlar va ularning poytaxtlari lug'atini tuzing. Avval lug'atdagi davlatlarni, keyin poytaxtlarni alohida-alohida, alifbo ketma-ketligida konsolga chiqaring. 
+# poytaxtlar = {
+#     "O'zbekiston" : "Toshkent",
+#     "Russia" : "Moskow",
+#     "USA" : "Washington D.C.",
+#     "Spain" : "Madrid",
+#     "Saudia Arabia" : "Ar-Riyadh",
+#     "Italy" : "Rome",
+#     "France" : "Paris",
+#     "Germany" : "Berlin"
+# }
+# print("Dunyo davlatlari: ")
+# for davlat in poytaxtlar.keys():
+#     print(davlat.upper())
+# print("Davlatlarning poytaxtlari: ")
+# for poytaxt in sorted(poytaxtlar.values()):
+#     print(poytaxt)
+# Foydalanuvchidan istalgan davlatni kiritishni so'rang va shu davlatning poytaxtini konsolga chiqaring. 
+# Agar foydalanuvchi lug'atda yo'q davlatni kiritsa, "Bizda bunday ma'lumot yo'q" degan xabarni chiqaring.
+# savol = input("Siz menga davlatning nomini ayting, agar men bilsam uning poytaxtini aytaman. \n>>>")
+# if savol.capitalize() in poytaxtlar.keys():
+#     print(f"{savol.capitalize()} ning poytaxti {poytaxtlar[savol.capitalize()]}")
+# else:
+#     print("Bizda bunday ma'lumot yo'q")
+
+# Restoran menusi lug'atini tuzing (kamida 10 ta taom-narh juftligini kiriting). Foydalanuvchidan 3 ta ovqat buyurtma berishni so'rang. 
+# Foydalanuvchi kiritgan taomlarni menu bilan solishtiring, agar taom menuda bo'lsa narhini ko'rsating, aks holda "bizda bunday taom yo'q" degan xabarni chiqaring.
+# menu = {
+#     "osh" : 18000,
+#     "lag'mon" : 22000,
+#     "manti" : 5000,
+#     "gumma" : 4000,
+#     "beshbarmoq": 80000,
+#     "sho'rva" : 20000,
+#     "bifshteks" : 25000,
+#     "norin" : 28000,
+#     "moshkichiri" : 60000,
+#     "somsa" : 7000,
+#     "kabob" : 12000
+# }
+# buyurtma = []
+# for n in range(3):
+#     buyurtma.append(input(f"Iltimos {n+1} chi taomni tanglang\n>>>"))
+# for taom in buyurtma:
+#     if taom in menu.keys():
+#         print(f"{taom.capitalize()} ning narhi - {menu[taom]} so'm")
+#     else:
+#         print(f"Afsuski bizda {taom} yo'q")
+
+
+#16 NESTING
+# AMALIYOT
+# Adabiyot (ilm-fan, san'at, internet) olamidagi 4 ta mashxur shaxlar haqidagi ma'lumotlarni lug'at ko'rinishida saqlang. Lug'atlarni bitta ro'yxatga joylang,
+#  va har bir shaxs haqidagi ma'lumotni konsolga chiqaring.
+# buxoriy = {'ism':'Abu Abdulloh Muhammad ibn Ismoil',
+#            'tyil':810,
+#            'vyil':870,
+#            'tjoy':'Buxoro',
+#            'asarlar':["Al-jome’ as-sahih", "Al-adab al-mufrad", "At-tarix al-kabir", "At-tarix as-sag‘ir"]
+#            }
+
+# qodiriy = {'ism':'Abdulla Qodiriy',
+#            'tyil':1894,
+#            'vyil':1938,
+#            'tjoy':'Toshkent',
+#            'asarlar':["O'tkan kunlar","Mehrobdan Chayon",'Obid ketmon']
+#            }
+
+# vohidov = {'ism':'Erkin Vohidov',
+#            'tyil':1936,
+#            'vyil':2016,
+#            'tjoy':"Farg'ona",
+#            'asarlar':["Tong nafasi","Qo'shiqlarim sizga","O'zbegim","Qiziquvchan Matmusa"]
+#            }
+
+# navoiy = {'ism':'Alisher Navoiy',
+#            'tyil':1441,
+#            'vyil':1501,
+#            'tjoy':"Xirot",
+#            'asarlar':["Xamsa","Lison ut-Tayr","Mahbub Al-Qulub",'Munojot']
+#            }
+# shaxslar = [buxoriy, qodiriy, vohidov, navoiy]
+
+# for shaxs in shaxslar:
+#     print(f"{shaxs['ism']}, {shaxs['tyil']} yil {shaxs['tjoy']}da tug'ilgan va " 
+#         f"{shaxs['vyil']-shaxs['tyil']} yil umr ko'rib {shaxs['vyil']} yilda vafot topgan")
+
+# Yuqoridagi lug'atlarga har bir shaxsning mashxur asarlari ro'yxatini ham qo'shing. For tsikli yordamida muallifning ismi va uning asarlarini konsolga chiqaring.
+# for shaxs in shaxslar:
+#     ism = shaxs['ism']
+#     asarlar = shaxs['asarlar']
+#     print(f"\n{ism} ning mashxur asarlari: ")
+#     for asar in asarlar:
+#         print(asar)
+
+# Oila a'zolaringiz (do'stlaringiz) dan 3 ta sevimli kino-seriali haqida so'rang. 
+# Do'stingiz ismi kalit, uning sevimli kinolarini esa ro'yxat ko'rinishida lug'artga saqlang. Natijani konsolga chiqaring.
+# yaqinlar = {
+#     'Sardor' : [],
+#     'Fazliddin' : [],
+#     'Boymurod' : [],
+# }
+# for ism, film in yaqinlar.items():
+#     for n in range(3):
+#         savol = input(f"{ism} yaxshi korgan {n+1} chi filmingizni yoki serialingizni ayting\n>>>")
+#         yaqinlar[ism].append(savol)
+
+#     print(f"{ism} ning yaxshi ko'rgan film va seriallar: ")
+#     for kino in film:
+#         print(kino.capitalize())
+
+# Davlatlar degan lug'at yarating, lug'at ichida bir nechta davlatlar haqida ma'lumotlarni lug'at ko'rinishida saqlang. 
+# Har bir davlat haqida ma'lumotni konsolga chiqaring.
+# davlatlar = {
+#     "o'zbekiston":{'poytaxt':"toshkent",
+#                    'maydon':448978,
+#                    'aholi':33_000_000,
+#                    'pul birligi':"so'm"
+#                    },
+#     "rossiya":{'poytaxt':"moskva",
+#                    'maydon':17_098_246,
+#                    'aholi':144_000_000,
+#                    'pul birligi':"rubl"
+#                    },
+#     "aqsh":{'poytaxt':"vashington",
+#                    'maydon':9_631_418,
+#                    'aholi':327_000_000,
+#                    'pul birligi':"dollar"},
+#     "malayziya":{'poytaxt':"kuala-lumpur",
+#                    'maydon':329750,
+#                    'aholi':25_000_000,
+#                    'pul birligi':"rinngit"}
+#     }
+
+# for davlat, info in davlatlar.items():
+#     print(f"\n{davlat.capitalize()} ning poytaxt {info['poytaxt'].title()}\nHududi: {info['maydon']}\nAholisi: {info['aholi']}\nPul birligi: {info['pul birligi']}")
+
+# Yuqoridagi dasturga o'zgartirish kiriting: konsolga barcha davlatlarni emas, foydalanuvchi so'ragan davlat haqida ma'lumot bering. 
+# Agar davlat sizning lug'atingizda mavjud bo'lmasa, "Bizda bu davlat haqida ma'lumot yo'q" degan xabarni chiqaring.
+# savol = input("Davlatni kiriting, men sizga u haqida ma'lumot beraman\n>>>")
+# if savol.lower() in davlatlar.keys():
+#     info = davlatlar[savol.lower()]
+#     print(f"\n{savol.capitalize()} ning poytaxt {info['poytaxt'].title()}\nHududi: {info['maydon']}\nAholisi: {info['aholi']}\nPul birligi: {info['pul birligi']}")
+# else:
+#     print(f"Afsuski, bizda {savol.title()} haqida ma'lumot yo'q")
+
+
+#17 WHILE TSIKLI
+# AMALIYOT
+# Foydalanuvchidan yaxshi ko'rgan kitoblarini kiritishni so'rang. Foydalanuvchi stop so'zini yozishi bilan dasturni to'xtating
+# while True:
+#     savol = input("O'ziz yaxshi korgan kitobni kiriting(Agar to'xtatishni istasangiz 'stop' deb yozing):\n>>>")
+#     if savol == 'stop':
+#         break
+# print("Dastur to'xtatildi!")
+
+# Muzeyga chipta narhi foydalanuvchining yoshiga bog'liq: 7 dan yoshlarga - 2000 so'm, 7-18 gacha 3000 so'm, 18-65 gacha 10000 so'm, 65 dan kattalarga bepul. 
+# Shunday while tsikl yozingki, dastur foydalanuvchi yoshini so'rasin va chipta narhini chiqarsin. Foydalanuvchi exit yoki quit deb yozganda dastur to'xtasin 
+# (ikkita shartni ham tekshiring).
+# ishora = True
+# while ishora:
+#     yosh = int(input("Yoshingiz nechida: "))
+#     if yosh <= 7 and yosh > 0:
+#         narh = 2000
+#     elif yosh < 18:
+#         narh = 3000
+#     elif yosh < 65:
+#         narh = 10000
+#     else:
+#         narh = 'bepul'
+#     print(f"Siz uchun muzeyga kirish - {narh}")
+#     savol = input("Yana davom etishni hohlaysizmi? (yes/no)\n>>>")
+#     if savol == 'yes':
+#         continue
+#     else:
+#         ishora = False
+# Yuqoridagi dasturni turli usullarda yozib ko'ring (break, ishora, yoki shart tekshirish)
+
+
+#18 WHILE, RO'YXATLAR VA LUG'ATLAR
+# AMALIYOT
+# Foydalanuvchidan buyurtma qabul qiluvchi dastur yozing. Mahsulotlar nomini birma-bir qabul qilib, yangi ro'yxatga joylang.
+# buyurtma = []
+
+# while True:
+#     savol = input("Taomni nomini kiriting(agar to'xtatmoqchi bo'lsangiz 'exit' deb yozing): ")
+#     if savol != 'exit':
+#         buyurtma.append(savol)
+#     else:
+#         break
+# print(buyurtma)
+
+# e-bozor uchun mahsulotlar va ularning narhlari lug'atini shakllantiruvchi dastur yozing. 
+# Foydalanuvchidan lug'atga bir nechta elementlar (mahsulot va uning narhi) kiritishni so'rang.
+# e_bozor = {}
+# print("Keling bozorlik qilamiz!")
+# while True:
+#     mahsulot = input(f"Mahsulotni kiriting: ")
+#     kg = float(input(f"{mahsulot.title()} dan nechi kg olmoqchisiz: "))
+#     narh = int(input(f"{mahsulot.title()}ning narhini kiriting: "))
+#     e_bozor[mahsulot] = narh * kg
+#     savol = input("Yana mahsulot kiritasizmi?(yes/no)\n>>>")
+#     if savol == 'yes':
+#         continue
+#     else:
+#         break
+
+# print("\nSiz tanlagan mahsulotlar: ")
+# for mahsulot, narh in e_bozor.items():
+#     print(f"{mahsulot.title()} {narh} so'mlik")
+
+# print(f"Umumiy {sum(e_bozor.values())} so'm bo'ldi")
+
+# Yuqoridagi ikki dasturni jamlaymiz. Foydalanuvchi buyurtmasi ro'yxatidagi har bir mahsulotni e-bozordagi mahsulotlar bilan solishitiring 
+# (tayyor ro'yxat ishlatishingiz mumkin). Agar mahsuot e-bozorda mavjud bo'lsa mahsulot narhini chiqaring, aks holda "Bizda bu mahsulot yo'q" degan xabarni kor'sating.
+# buyurtmalar = ['olma','anjir','uzum','qovun']
+# mahsulotlar = {'olma':20000,
+#                'shaftoli':25000,
+#                'tarvuz':18000,
+#                'uzum':22000}
+
+# while buyurtmalar:
+#     buyurtma = buyurtmalar.pop()
+#     if buyurtma in mahsulotlar.keys():
+#         print(f"{buyurtma.title()}ning narhi {mahsulotlar[buyurtma]}")
+#     else:
+#         print(f"Afsuski bizda {buyurtma} yo'q")
+
+
+#19 FUNKSIYA
+# AMALIYOT
+# Foydalanuvchi ismi va yoshini so'rab, uning tug'ilgan yilini hisoblaydigan funksiya yozing.
+# def info(ism, yosh):
+#     return f"Assalomu alaykum {ism.capitalize()}, sizning tug'ilgan yilingiz: {2024-yosh}"
+
+# print(info('faxriddin',22))
+
+# Foydalanuvchidan son olib, uning kvadrati va kubini konsolga chiqaruvchi funksiya yozing.
+# def kvadrat_kub(son):
+#     return f"{son} ning kvadrati - {son**2}, kubi esa - {son**3}"
+
+# print(kvadrat_kub(5))
+
+# Foydalanuvchidan son olib, son juft yoki toqligini konsolga chiqaruvchi funksiya yozing.
+# def juft_toq(son):
+#     if son % 2 == 0:
+#         return f"{son} juft son!"
+#     else:
+#         return f"{son} toq son!"
+
+# print(juft_toq(8))
+
+# Foydalanuvchidan ikkita son olib, ulardan kattasini konsolga chiqaruvchi funksiya yozing. Agar sonlar teng bo'lsa "Sonlar teng" degan xabarni chiqaring.
+# def bigger(son1, son2):
+#     if son1 > son2:
+#         max = son1
+#     elif son1 < son2:
+#         max = son2
+#     else:
+#         return "Sonlar teng!"
+#     return f"{max} kattaroq son!"
+
+# print(bigger(5,7))
+
+# Foydalanuvchidan x va y sonlarini olib, x darajasida y ni qaytaradigan function yarating
+# Yuqoridagi funksiyada y uchun 2 standart qiymatini bering.
+# def daraja(x,y=2):
+#     """x darajasida y ni qaytaradigan function"""
+#     return f"{x} ning {y} chi darajasi - {x**y}"
+
+# print(daraja(9))
+
+# Foydalanuvchidan son qabul qilib, sonni 2 dan 10 gacha bo'lgan sonlarga qoldiqsiz bo'linishini tekshiruvchi funksiya yozing. Natijalarni konsolga chiqaring.
+# def bolinish_alomatlari(son):
+
+#     for n in range(2, 11):
+#         if son % n == 0:
+#              print(f"{son} {n} ga qoldiqsiz bo'linadi")
+
+# bolinish_alomatlari(70)
+
+
+#20 QIYMAT QAYTARUVCHI FUNKSIYA
+# AMALIYOT
+# Foydanaluvchidan ismi, familiyasi, tug'ilgan yili, tug'ilgan joyi, email manzili va telefon raqamini qabul qilib, lug'at ko'rinishida qaytaruvchi funksiya yozing. 
+# Lug'atda foydalanuvchu yoshi ham bo'lsin. Ba'zi argumentlarni kiritishni ixtiyoriy qiling (masalan, tel.raqam, el.manzil)
+# def info(ism, familiya, t_yil, t_joy, email, telefon):
+#     full_info = {}
+#     full_info['ism'] = ism
+#     full_info['familiya'] = familiya
+#     full_info['t_yil'] = t_yil
+#     full_info['t_joy'] = t_joy
+#     full_info['email'] = email
+#     full_info['telefon'] = telefon
+#     full_info['yosh'] = 2024-t_yil
+#     return full_info
+
+# print(info('Faxriddin', 'Teshaboyev', 2000, 'Paris', 'fax123@gmail.com',"+009334221"))
+
+# Yuqoridagi funksiyani while yordamida bir necha bor chaqiring, va mijozlar degan ro'yxatni shakllantiring. 
+# Ro'yxatdagi mijozlar haqidagi ma'lumotni konsolga chiqaring.
+# def info():
+#     mijozlar = []
+#     full_info = {}
+#     while True:
+#         ism = input("Ismingizni kiriting: ")
+#         full_info['ism'] = ism
+
+#         familiya = input("Familiyangizni kiriting: ")
+#         full_info['familiya'] = familiya
+
+#         t_yil = int(input("Tug'ilgan yilingizni kiriting: "))
+#         full_info['t_yil'] = t_yil
+
+#         t_joy = input("Tug'ilgan joyingizni kiriting: ")
+#         full_info['t_joy'] = t_joy
+
+#         email = input("Emailingizni kiriting: ")
+#         full_info['email'] = email
+
+#         telefon = input("Telefon raqamingizni kiriting: ")
+#         full_info['telefon'] = telefon
+#         full_info['yosh'] = 2024-t_yil
+
+#         mijozlar.append(full_info)
+#         savol = input("Yana odam qo'shasizmi(yes/no)?: ")
+#         if savol == 'no':
+#             break
+#     return mijozlar
+
+# print(info())
+
+# Uchta son qabul qilib, ulardan eng kattasini qaytaruvchi funksiya yozing
+# def eng_katta(son1, son2, son3):
+#     if son1 > son2 and son1 > son3:
+#         max = son1
+#     elif son2 > son3 and son2 > son1:
+#         max = son2
+#     else:
+#         max = son3
+#     return max
+
+# print(eng_katta(4,9,7))    
+
+# Foydalanuvchidan aylaning radiusini qabul qilib olib, uning radiusini, diametrini, perimetri va yuzini lug'at ko'rinishida qaytaruvchi funksiya yozing
+# def data(radius):
+#     aylana_info = {}
+#     pi = 3.14
+#     aylana_info['radius'] = radius
+#     aylana_info['diametr'] = radius * 2
+#     aylana_info['perimetr'] = 2*pi*radius
+#     aylana_info['yuzi'] = pi*(radius**2)
+#     return aylana_info
+
+# print(data(3))
+
+# Berilgan oraliqdagi tub sonlar ro'yxatini qaytaruvchi funksiya yozing (tub sonlar —faqat birga va o'ziga qoldiqsiz bo'linuvchi, 1 dan katta musbat sonlar)
+# def tub_sonlar_top(min, max):
+#     tub_sonlar = []
+#     for n in range(min, max + 1):
+#         tub = True
+#         if n == 1:
+#             tub = False
+#         elif n == 2:
+#             tub = True
+#         else:
+#             for x in range(2, n):
+#                 if n % x == 0:
+#                     tub = False
+#         if tub:
+#             tub_sonlar.append(n)
+
+#     return tub_sonlar
+
+# print(tub_sonlar_top(4,15))
+
+# Foydalanuvchidan son qabul qilib, shu son miqdoricha Fibonachchi ketma-ketligidagi sonlar ro'yxatni qaytaruvchi funksiya yozing.  
+# Ta’rif: Har bir hadi o’zidan oldingi ikkita hadning yig’indisiga teng bo’lgan ketma-ketlik Fibonachchi ketma-ketligi deyiladi. 
+# Bunda boshlang’ish had ko’pincha 1 deb olinadi.  1, 1, 2, 3, 5, 8, 13, 21, 34, 55,...
+# def fibonacci(n):
+#     my_list = []
+#     for x in range(n):
+#         if x == 0 or x == 1:
+#             my_list.append(1)
+#         else:
+#             my_list.append(my_list[x - 1] + my_list[x - 2])
+#     return my_list
+# print(fibonacci(5))
+
+
+#21 FUNKSIYA VA RO'YXAT
+# AMALIYOT
+# Matnlardan iborat ro'yxat qabul qilib, ro'yxatdagi har bir matnning birinchi harfini katta harfga o'zgatiruvchi funksiya yozing. 
+# def katta_harf(my_list):
+#     new_list = []
+#     for ism in my_list:
+#         new_list.append(ism.title())
+#     return new_list
+
+# ismlar = ['ali', 'vali', 'hasan', 'husan']
+# print(katta_harf(ismlar))
+# print(ismlar)
+
+# 22 MOSLASHUVCHAN FUNKSIYA (*args, **kwargs)
+# AMALIYOT
+# Istalgancha sonlarni qabul qilib, ularning ko'paytmasini qaytaruvchi funksiya yozing
+# def multiple(*sonlar):
+#     kupaytma = 1
+#     for son in sonlar:
+#         kupaytma *= son
+#     return kupaytma
+
+# print(multiple(3,5,6))
+
+# Talabalar haqidagi ma'lumotlarini lug'at ko'rinishida qaytaruvchi funkisya yozing. 
+# Talabaning ismi va familiyasi majburiy argument, qolgan ma'lumotlar esa ixtiyoriy ko'rinishda istalgancha berilishi mumkin bo'lsin.
+# def info(ism, familiya, **malumotlar):
+#     malumotlar['ism'] = ism
+#     malumotlar['familiya'] = familiya
+#     return malumotlar
+
+# print(info('Hasan', "Turayev", t_yil=2005, t_joy='AQSH'))
+
+
+#38 PYTHON STANDART KUTUBXONASI
+# AMALIYOT
+# Bugungi sanadan boshlab 2 hafta farq bilan 10 ta sanani konsolga chiqaring
+import datetime as dt
+
+hozir = dt.date.today()
+final = dt.date(2025, 1, 13)
+farq = final - hozir
+for n in range(10):
+    print(hozir+farq*n)
+
+# Ramazon va qurbon hayitigacha qolgan kunlarni konsolga chiqaring
+# ramazon = dt.date(2025, 3, 1)
+# qurbon_hayot = dt.date(2025, 6, 7)
+# print(f"Nasb bo'lsa ramazongacha {(ramazon-hozir).days} kun qoldi, Qurbon hayitiga esa {(qurbon_hayot-hozir).days} kun qoldi")
+
+# Tug'ilgan kuningizdan bugungi sanagacha qancha yil, oy, kun o'tganini qaytaruvchi funksiya yozing
+# t_kun = dt.date(2004, 1, 5)
+# farq = hozir - t_kun
+# yil = (farq.days)//365
+# oy = (farq.days)//30
+# months = (farq.days - yil*365)//30
+# kun = farq.days - yil*365 - months*30
+# print(f"Tug'ilganingizga {yil} yil bo'ldi, oyda hisoblaganda {oy} oy bo'lgan va kunda hisoblaganda {farq.days} kun bo'ldi")
+
+# Foydalanuvchidan telefon raqamini kiritishni so'rang. Kiritlgan qiymatni andoza yordamida tekshiring
+import re
+
+# savol = input("Telefon raqamingizni kiriting: ")
+# andoza = "^\\+?[1-9][0-9]{7,14}$"
+# print(re.match(andoza, savol))
+
+# Berilgan matndan veb sahifa manzilini ajratib olyuvchi funksiya yozing. Quyidagi matndan namuna sifatida foydalanishingiz mumkin:
+# def extract_urls(text):
+#     # Simple regex pattern for URLs
+#     pattern = r'http[s]?://\S+'
+#     return re.findall(pattern, text)
+
+# # Example usage
+# text = "Assalom alaykum hurmatli do'stlar. Navbatdagi darsimiz YouTubega yuklandi: https://youtu.be/vsxJPRLXpgI \
+# # Ushbu darsimizda unittest moduli yordamida klasslarning xususiyatlar va metodlarini tekshiruvchi dastur yozishni o'rganamiz. \
+# # Bugungi dars manzili: https://python.sariq.dev/testing/37-klass-test"
+# urls = extract_urls(text)
+# print(urls)

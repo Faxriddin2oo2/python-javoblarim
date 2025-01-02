@@ -858,13 +858,13 @@
 #38 PYTHON STANDART KUTUBXONASI
 # AMALIYOT
 # Bugungi sanadan boshlab 2 hafta farq bilan 10 ta sanani konsolga chiqaring
-import datetime as dt
+# import datetime as dt
 
-hozir = dt.date.today()
-final = dt.date(2025, 1, 13)
-farq = final - hozir
-for n in range(10):
-    print(hozir+farq*n)
+# hozir = dt.date.today()
+# final = dt.date(2025, 1, 13)
+# farq = final - hozir
+# for n in range(10):
+#     print(hozir+farq*n)
 
 # Ramazon va qurbon hayitigacha qolgan kunlarni konsolga chiqaring
 # ramazon = dt.date(2025, 3, 1)
