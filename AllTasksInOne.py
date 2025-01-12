@@ -881,7 +881,7 @@
 # print(f"Tug'ilganingizga {yil} yil bo'ldi, oyda hisoblaganda {oy} oy bo'lgan va kunda hisoblaganda {farq.days} kun bo'ldi")
 
 # Foydalanuvchidan telefon raqamini kiritishni so'rang. Kiritlgan qiymatni andoza yordamida tekshiring
-import re
+# import re
 
 # savol = input("Telefon raqamingizni kiriting: ")
 # andoza = "^\\+?[1-9][0-9]{7,14}$"
