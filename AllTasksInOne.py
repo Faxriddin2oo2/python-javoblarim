@@ -881,21 +881,21 @@
 # print(f"Tug'ilganingizga {yil} yil bo'ldi, oyda hisoblaganda {oy} oy bo'lgan va kunda hisoblaganda {farq.days} kun bo'ldi")
 
 # Foydalanuvchidan telefon raqamini kiritishni so'rang. Kiritlgan qiymatni andoza yordamida tekshiring
-# import re
+import re
 
 # savol = input("Telefon raqamingizni kiriting: ")
 # andoza = "^\\+?[1-9][0-9]{7,14}$"
 # print(re.match(andoza, savol))
 
 # Berilgan matndan veb sahifa manzilini ajratib olyuvchi funksiya yozing. Quyidagi matndan namuna sifatida foydalanishingiz mumkin:
-# def extract_urls(text):
-#     # Simple regex pattern for URLs
-#     pattern = r'http[s]?://\S+'
-#     return re.findall(pattern, text)
+def extract_urls(text):
+    # Simple regex pattern for URLs
+    pattern = r'http[s]?://\S+'
+    return re.findall(pattern, text)
 
 # # Example usage
-# text = "Assalom alaykum hurmatli do'stlar. Navbatdagi darsimiz YouTubega yuklandi: https://youtu.be/vsxJPRLXpgI \
-# # Ushbu darsimizda unittest moduli yordamida klasslarning xususiyatlar va metodlarini tekshiruvchi dastur yozishni o'rganamiz. \
-# # Bugungi dars manzili: https://python.sariq.dev/testing/37-klass-test"
-# urls = extract_urls(text)
-# print(urls)
+text = "Assalom alaykum hurmatli do'stlar. Navbatdagi darsimiz YouTubega yuklandi: https://youtu.be/vsxJPRLXpgI \
+# Ushbu darsimizda unittest moduli yordamida klasslarning xususiyatlar va metodlarini tekshiruvchi dastur yozishni o'rganamiz. \
+# Bugungi dars manzili: https://python.sariq.dev/testing/37-klass-test"
+urls = extract_urls(text)
+print(urls)
