@@ -881,21 +881,40 @@
 # print(f"Tug'ilganingizga {yil} yil bo'ldi, oyda hisoblaganda {oy} oy bo'lgan va kunda hisoblaganda {farq.days} kun bo'ldi")
 
 # Foydalanuvchidan telefon raqamini kiritishni so'rang. Kiritlgan qiymatni andoza yordamida tekshiring
-import re
+# import re
 
 # savol = input("Telefon raqamingizni kiriting: ")
 # andoza = "^\\+?[1-9][0-9]{7,14}$"
 # print(re.match(andoza, savol))
 
 # Berilgan matndan veb sahifa manzilini ajratib olyuvchi funksiya yozing. Quyidagi matndan namuna sifatida foydalanishingiz mumkin:
-def extract_urls(text):
-    # Simple regex pattern for URLs
-    pattern = r'http[s]?://\S+'
-    return re.findall(pattern, text)
+# def extract_urls(text):
+#     # Simple regex pattern for URLs
+#     pattern = r'http[s]?://\S+'
+#     return re.findall(pattern, text)
 
-# # Example usage
-text = "Assalom alaykum hurmatli do'stlar. Navbatdagi darsimiz YouTubega yuklandi: https://youtu.be/vsxJPRLXpgI \
-# Ushbu darsimizda unittest moduli yordamida klasslarning xususiyatlar va metodlarini tekshiruvchi dastur yozishni o'rganamiz. \
-# Bugungi dars manzili: https://python.sariq.dev/testing/37-klass-test"
-urls = extract_urls(text)
-print(urls)
+# # # Example usage
+# text = "Assalom alaykum hurmatli do'stlar. Navbatdagi darsimiz YouTubega yuklandi: https://youtu.be/vsxJPRLXpgI \
+# # Ushbu darsimizda unittest moduli yordamida klasslarning xususiyatlar va metodlarini tekshiruvchi dastur yozishni o'rganamiz. \
+# # Bugungi dars manzili: https://python.sariq.dev/testing/37-klass-test"
+# urls = extract_urls(text)
+# print(urls)
+
+
+# RANDOM TASKS
+# Есть список a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89].
+# Выведите все элементы, которые меньше 5
+# a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+# for i in a:
+#     if i < 5:
+#         print(i)
+
+# a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+# b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+# result = [elem for elem in a if elem in b]
+# print(result)
+
+list1 = [1,2,4]
+list2 = [1,3,4]
+list3 = list1 + list2
+print(sorted(list3))
