@@ -918,3 +918,14 @@
 # list2 = [1,3,4]
 # list3 = list1 + list2
 # print(sorted(list3))
+
+# При заданном целом числе n посчитайте n + nn + nnn
+def yigindi(n):
+    # nn = n*10 + n
+    # nnn = n*100 + nn
+    # return f"{n} + {nn} + {nnn} = {n + nn + nnn}"
+    n2 = int(str(n)*2)
+    n3 = int(str(n)*3)
+    return n + n2 + n3
+
+print(yigindi(5))
