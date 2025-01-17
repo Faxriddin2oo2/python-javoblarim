@@ -920,12 +920,28 @@
 # print(sorted(list3))
 
 # При заданном целом числе n посчитайте n + nn + nnn
-def yigindi(n):
-    # nn = n*10 + n
-    # nnn = n*100 + nn
-    # return f"{n} + {nn} + {nnn} = {n + nn + nnn}"
-    n2 = int(str(n)*2)
-    n3 = int(str(n)*3)
-    return n + n2 + n3
+# def yigindi(n):
+#     # nn = n*10 + n
+#     # nnn = n*100 + nn
+#     # return f"{n} + {nn} + {nnn} = {n + nn + nnn}"
+#     n2 = int(str(n)*2)
+#     n3 = int(str(n)*3)
+#     return n + n2 + n3
 
-print(yigindi(5))
+# print(yigindi(5))
+
+# Посчитайте, сколько раз символ встречается в строке.
+def counting(string, letter):
+    soni = 0
+    for i in string:
+        if i.lower() == letter.lower():
+            soni += 1
+        else:
+            continue
+    return f"{string} matnda {letter.lower()} harfi {soni} marta takrorlangan"
+
+# print(counting("Assalomu alaykum", "A"))
+
+matn = "Assalomu alaykum"
+print(counting(matn, "a"))
+print(matn.count("a"))
