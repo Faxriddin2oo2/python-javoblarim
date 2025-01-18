@@ -947,10 +947,35 @@
 # print(matn.count("a"))
 
 
-letters = 'ЫгВЫоЯСремДШНККАыкЩЙФа'
-clean_string = ''
-for letter in letters:
-    if not letter.isupper():
-        clean_string += letter
-letters = clean_string
-print(letters)
+# letters = 'ЫгВЫоЯСремДШНККАыкЩЙФа'
+# clean_string = ''
+# for letter in letters:
+#     if not letter.isupper():
+#         clean_string += letter
+# letters = clean_string
+# print(letters)
+
+
+rus_lower = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+# for position in range(11):
+#     print('^' * 27)
+#     for letter in rus_lower:
+#         if rus_lower.index(letter) % 11 == position:
+#             print('| ', letter.upper(), letter, ' |', end='')
+#     print()
+# print('^' * 27)
+
+# for pos in range(11):
+#     print("^"*27)
+#     for letter in rus_lower:
+#         if rus_lower.index(letter)%11 == pos:
+#             print('| ', letter.upper(), letter, '| ', end = '')
+#     print()
+# print('^' * 27)
+
+friends = [ 'Мавпродош', 'Лорнектиф', 'Древерол', 'Фиригарпиг', 'Клодобродыч']
+check = input("Please enter your name: ")
+if check in friends:
+    print(f"Assalamu alaykum brother! How about your day {check.title()}")
+else:
+    print("There are nothing you are looking for! May I help you?")
