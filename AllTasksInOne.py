@@ -973,9 +973,9 @@ rus_lower = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
 #     print()
 # print('^' * 27)
 
-# friends = [ 'Мавпродош', 'Лорнектиф', 'Древерол', 'Фиригарпиг', 'Клодобродыч']
-# check = input("Please enter your name: ")
-# if check in friends:
-#     print(f"Assalamu alaykum brother! How about your day {check.title()}")
-# else:
-#     print("There are nothing you are looking for! May I help you?")
+friends = [ 'Мавпродош', 'Лорнектиф', 'Древерол', 'Фиригарпиг', 'Клодобродыч']
+check = input("Please enter your name: ")
+if check in friends:
+    print(f"Assalamu alaykum brother! How about your day {check.title()}")
+else:
+    print("There are nothing you are looking for! May I help you?")
