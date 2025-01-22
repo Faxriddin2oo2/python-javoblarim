@@ -979,3 +979,14 @@ rus_lower = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
 #     print(f"Assalamu alaykum brother! How about your day {check.title()}")
 # else:
 #     print("There are nothing you are looking for! May I help you?")
+
+def count_vowels(s):
+    vowels = 'aeiou'
+    # count = 0
+    # for char in s.lower():
+    #     if char in vowels:
+    #         count += 1
+    # return count
+    return sum(1 for char in s.lower() if char in vowels)
+
+print(count_vowels("hello world"))
